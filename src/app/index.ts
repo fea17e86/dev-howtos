@@ -1,1 +1,3 @@
-export { default } from "./app.component";
+import { App } from "./app.component";
+
+export default App.Component;
