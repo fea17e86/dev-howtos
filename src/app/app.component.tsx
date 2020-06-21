@@ -1,14 +1,23 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
 
 import { Article } from "article";
 import { Tag } from "components";
+import { AppRoute } from "router";
 
 export namespace App {
   export function Container({ children }: ContainerProps) {
+    const { push } = useHistory();
+    const params = useParams<{ selectedTags: string }>();
+    const { selectedTags } = useMemo(() => {
+      return {
+        selectedTags: new Set<string>(
+          params.selectedTags?.split(",").filter((tag) => tag.trim() !== "") ??
+            []
+        ),
+      };
+    }, [params]);
     const [articles, setArticles] = useState<Article.Type[]>([]);
-    const [selectedTags, setSelectedTags] = useState<Set<string>>(
-      new Set<string>()
-    );
 
     useEffect(() => {
       (async function fetchReadmeMd() {
@@ -47,23 +56,25 @@ export namespace App {
     );
 
     function selectTag(tag: string) {
-      setSelectedTags(
-        (selectedTags) => new Set<string>([...Array.from(selectedTags), tag])
-      );
+      const nextSelectedTags = new Set<string>([
+        ...Array.from(selectedTags),
+        tag,
+      ]);
+      push(AppRoute.create(nextSelectedTags));
     }
 
     function toggleTag(tag: string) {
-      setSelectedTags((selectedTags) => {
-        if (selectedTags.has(tag)) {
-          return new Set<string>([
-            ...Array.from(selectedTags).filter(
-              (selectedTag) => selectedTag !== tag
-            ),
-          ]);
-        } else {
-          return new Set<string>([...Array.from(selectedTags), tag]);
-        }
-      });
+      let nextSelectedTags = selectedTags;
+      if (selectedTags.has(tag)) {
+        nextSelectedTags = new Set<string>([
+          ...Array.from(selectedTags).filter(
+            (selectedTag) => selectedTag !== tag
+          ),
+        ]);
+      } else {
+        nextSelectedTags = new Set<string>([...Array.from(selectedTags), tag]);
+      }
+      push(AppRoute.create(nextSelectedTags));
     }
 
     return children({
