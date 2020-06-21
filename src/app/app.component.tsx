@@ -1,24 +1,33 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-import { Article, Tag } from "components";
-
-interface Link {
-  url: string;
-  text: string;
-  tags: string[];
-}
+import { Article } from "article";
+import { Tag } from "components";
 
 export namespace App {
   export function Component() {
-    const [links, setLinks] = useState<Link[]>([]);
-    const [tags, setTags] = useState<Set<string>>(new Set<string>());
+    const [articles, setArticles] = useState<Article.Type[]>([]);
     const [selectedTags, setSelectedTags] = useState<Set<string>>(
       new Set<string>()
     );
 
-    const filteredLinks = useMemo(
+    useEffect(() => {
+      (async function fetchReadmeMd() {
+        const response = await fetch("/dev-howtos/README.md");
+        const redmeaMd = await response.text();
+        setArticles(Article.parseArticles(redmeaMd));
+      })();
+    }, []);
+
+    const tags = useMemo(() => {
+      return articles.reduce(
+        (tagSet, { tags }) => new Set<string>([...Array.from(tagSet), ...tags]),
+        new Set<string>()
+      );
+    }, [articles]);
+
+    const filteredArticles = useMemo(
       () =>
-        links.filter(({ tags }) => {
+        articles.filter(({ tags }) => {
           if (selectedTags.size === 0) {
             return true;
           }
@@ -34,33 +43,8 @@ export namespace App {
 
           return contains;
         }),
-      [links, selectedTags]
+      [articles, selectedTags]
     );
-
-    useEffect(() => {
-      (async function fetchReadmeMd() {
-        const response = await fetch("/dev-howtos/README.md");
-        const redmeaMd = await response.text();
-        const extractLink = /(?:\[(.+)\])?\((.+)\)\[(.+)\]/g;
-        const links = [];
-        const nextTags = new Set<string>(new Set<string>());
-        let values;
-        while ((values = extractLink.exec(redmeaMd)) !== null) {
-          const link = {
-            text: values[1],
-            url: values[2],
-            tags: values[3].split(","),
-          };
-          links.push(link);
-          link.tags.forEach((tag) => {
-            nextTags.add(tag);
-          });
-        }
-        setLinks(links);
-        setTags(nextTags);
-        console.log(links, nextTags);
-      })();
-    }, []);
 
     function selectTag(tag: string) {
       setSelectedTags(
@@ -98,15 +82,18 @@ export namespace App {
           onTagClick={toggleTag}
         />
         <main>
-          {filteredLinks.map(({ url, text, tags }: Link, i) => (
-            <Article.Component
-              key={`${i}_${url}`}
-              contentUrl={url}
-              header={text || url}
-              tags={tags}
-              onTagClick={selectTag}
-            />
-          ))}
+          {filteredArticles.map(
+            ({ url, text, tags, description }: Article.Type, i) => (
+              <Article.Component
+                key={`${i}_${url}`}
+                contentUrl={url}
+                header={text || url}
+                tags={tags}
+                description={description}
+                onTagClick={selectTag}
+              />
+            )
+          )}
         </main>
       </div>
     );
