@@ -1,22 +1,28 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 import { Article } from "article";
 import { Tag } from "components";
 import { AppRoute } from "router";
 
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
 export namespace App {
   export function Container({ children }: ContainerProps) {
     const { push } = useHistory();
-    const params = useParams<{ selectedTags: string }>();
+    const query = useQuery();
     const { selectedTags } = useMemo(() => {
       return {
         selectedTags: new Set<string>(
-          params.selectedTags?.split(",").filter((tag) => tag.trim() !== "") ??
-            []
+          query
+            .get("selectedTags")
+            ?.split(",")
+            .filter((tag) => tag.trim() !== "") ?? []
         ),
       };
-    }, [params]);
+    }, [query]);
     const [articles, setArticles] = useState<Article.Type[]>([]);
 
     useEffect(() => {
