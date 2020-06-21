@@ -4,7 +4,7 @@ import { Article } from "article";
 import { Tag } from "components";
 
 export namespace App {
-  export function Component() {
+  export function Container({ children }: ContainerProps) {
     const [articles, setArticles] = useState<Article.Type[]>([]);
     const [selectedTags, setSelectedTags] = useState<Set<string>>(
       new Set<string>()
@@ -66,6 +66,27 @@ export namespace App {
       });
     }
 
+    return children({
+      articles,
+      filteredArticles,
+      selectedTags,
+      selectTag,
+      tags,
+      toggleTag,
+    });
+  }
+
+  export interface ContainerProps {
+    children: (props: ComponentProps) => JSX.Element;
+  }
+
+  export function Component({
+    filteredArticles,
+    selectedTags,
+    selectTag,
+    tags,
+    toggleTag,
+  }: ComponentProps) {
     return (
       <div
         style={{
@@ -97,6 +118,15 @@ export namespace App {
         </main>
       </div>
     );
+  }
+
+  export interface ComponentProps {
+    articles: Article.Type[];
+    filteredArticles: Article.Type[];
+    selectedTags: Set<string>;
+    selectTag: (tag: string) => void;
+    tags: Set<string>;
+    toggleTag: (tag: string) => void;
   }
 
   export function Header({ tags, selectedTags, onTagClick }: HeaderProps) {
