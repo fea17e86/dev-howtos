@@ -6,7 +6,6 @@
   "scripts": {
     "prestart": "copyfiles README.md public",
     "start": "rescripts start",
-    "prebuild": "copyfiles README.md public",
     "build": "rescripts build",
     "test": "rescripts test",
     "predeploy": "npm run build",
