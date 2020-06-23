@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/dev-howtos/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/dev-howtos/static/js/main.8f85f42d.chunk.js",
-    "main.js.map": "/dev-howtos/static/js/main.8f85f42d.chunk.js.map",
+    "main.css": "/dev-howtos/static/css/main.95a39ca8.chunk.css",
+    "main.js": "/dev-howtos/static/js/main.76836eab.chunk.js",
+    "main.js.map": "/dev-howtos/static/js/main.76836eab.chunk.js.map",
     "runtime-main.js": "/dev-howtos/static/js/runtime-main.c7a61bfb.js",
     "runtime-main.js.map": "/dev-howtos/static/js/runtime-main.c7a61bfb.js.map",
-    "static/js/2.80efbb57.chunk.js": "/dev-howtos/static/js/2.80efbb57.chunk.js",
-    "static/js/2.80efbb57.chunk.js.map": "/dev-howtos/static/js/2.80efbb57.chunk.js.map",
+    "static/js/2.b56f82cc.chunk.js": "/dev-howtos/static/js/2.b56f82cc.chunk.js",
+    "static/js/2.b56f82cc.chunk.js.map": "/dev-howtos/static/js/2.b56f82cc.chunk.js.map",
     "index.html": "/dev-howtos/index.html",
-    "precache-manifest.d47bc3c26c2eddf51ae98d4f4970c5db.js": "/dev-howtos/precache-manifest.d47bc3c26c2eddf51ae98d4f4970c5db.js",
+    "precache-manifest.a2b917a196d98587b18e8ed38d1fc0fd.js": "/dev-howtos/precache-manifest.a2b917a196d98587b18e8ed38d1fc0fd.js",
     "service-worker.js": "/dev-howtos/service-worker.js",
-    "static/css/main.5ecd60fb.chunk.css.map": "/dev-howtos/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.80efbb57.chunk.js.LICENSE.txt": "/dev-howtos/static/js/2.80efbb57.chunk.js.LICENSE.txt"
+    "static/css/main.95a39ca8.chunk.css.map": "/dev-howtos/static/css/main.95a39ca8.chunk.css.map",
+    "static/js/2.b56f82cc.chunk.js.LICENSE.txt": "/dev-howtos/static/js/2.b56f82cc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c7a61bfb.js",
-    "static/js/2.80efbb57.chunk.js",
-    "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.8f85f42d.chunk.js"
+    "static/js/2.b56f82cc.chunk.js",
+    "static/css/main.95a39ca8.chunk.css",
+    "static/js/main.76836eab.chunk.js"
   ]
 }
