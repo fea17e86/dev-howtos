@@ -1,5 +1,5 @@
 export function parseArticles(text: string) {
-  const extractArticle = /(?:### \[(.+)\])?\((.+)\)\[(.+)\](?:\r\n\r\n(.+))?/g;
+  const extractArticle = /(?:### \[(.+)\])?\((.+)\)\[(.+)\](?:\r?\n\r?\n(.+))?/g;
   const articles = [];
   let values;
   while ((values = extractArticle.exec(text)) !== null) {
