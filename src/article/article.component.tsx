@@ -18,16 +18,16 @@ export function Article({
           {header}
         </a>
       </header>
-      <div style={NotFirstStyles}>
-        {tags.sort().map((tag, i) => (
-          <Tag.Component key={`${i}_${tag}`} value={tag} onClick={onTagClick} />
-        ))}
-      </div>
       {description && (
         <div style={NotFirstStyles}>
           <em>{description}</em>
         </div>
       )}
+      <div style={NotFirstStyles}>
+        {tags.sort().map((tag, i) => (
+          <Tag.Component key={`${i}_${tag}`} value={tag} onClick={onTagClick} />
+        ))}
+      </div>
     </article>
   );
 }
