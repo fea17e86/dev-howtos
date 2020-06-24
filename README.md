@@ -2,6 +2,7 @@ A little list containing tutorials and solutions for development problems
 
 [To the App](https://fea17e86.github.io/dev-howtos) with search and filter functionality
 
+- [Git](#git)
 - [Typescript](#typescript)
 
 ## Typescript
