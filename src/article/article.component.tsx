@@ -1,12 +1,13 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 
 import { Tag } from "components";
 
 export function Article({
+  children: content,
   contentUrl,
   header,
   tags,
-  description,
   onTagClick,
   style = {},
   ...props
@@ -18,11 +19,7 @@ export function Article({
           {header}
         </a>
       </header>
-      {description && (
-        <div style={NotFirstStyles}>
-          <em>{description}</em>
-        </div>
-      )}
+      {content && <ReactMarkdown>{content}</ReactMarkdown>}
       <div style={NotFirstStyles}>
         {tags.sort().map((tag, i) => (
           <Tag.Component key={`${i}_${tag}`} value={tag} onClick={onTagClick} />
@@ -37,10 +34,10 @@ export interface Props
     React.HTMLAttributes<HTMLElement>,
     HTMLElement
   > {
+  children?: string;
   contentUrl: string;
   header: string;
   tags: string[];
-  description?: string;
   onTagClick: (tag: any) => void;
 }
 

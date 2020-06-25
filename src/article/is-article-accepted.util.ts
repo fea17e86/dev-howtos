@@ -35,7 +35,7 @@ const createMatchesTags = (selectedTags: Set<string>) => ({
 };
 
 const createMatchesSearch = (search?: string) => ({
-  description,
+  content,
   text,
 }: Article) => {
   if (!search) {
@@ -45,7 +45,7 @@ const createMatchesSearch = (search?: string) => ({
   let isAccepted = false;
   const toSearch = [
     text.toLocaleLowerCase(),
-    description?.toLocaleLowerCase(),
+    content?.toLocaleLowerCase(),
   ].filter((value) => !!value) as string[];
 
   let i: number = 0;

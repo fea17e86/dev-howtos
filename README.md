@@ -3,8 +3,12 @@ A little list containing tutorials and solutions for development problems
 [To the App](https://fea17e86.github.io/dev-howtos) with search and filter functionality
 
 - [Browser API](#browser-api)
+  - [Use FileSaver to save PDFs[browser-api,file-saver,blob,array-buffer]](#use-filesaver-to-save-pdfsbrowser-apifile-saverblobarray-buffer)
 - [Git](#git)
+  - [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
 - [Typescript](#typescript)
+  - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
+  - [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
 
 ## Browser API
 

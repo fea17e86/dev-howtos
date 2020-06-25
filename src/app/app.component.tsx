@@ -241,15 +241,16 @@ export namespace App {
     return (
       <main>
         {filteredArticles.map(
-          ({ url, text, tags, description }: Article.Type, i) => (
+          ({ url, text, tags, content }: Article.Type, i) => (
             <Article.Component
               key={`${i}_${url}`}
               contentUrl={url}
               header={text || url}
               tags={tags}
-              description={description}
               onTagClick={selectTag}
-            />
+            >
+              {content}
+            </Article.Component>
           )
         )}
       </main>
