@@ -15,9 +15,11 @@ export function Article({
   return (
     <article {...props} style={{ ...Style, ...style }}>
       <header>
-        <a href={contentUrl} target="_blank" rel="noopener noreferrer">
-          {header}
-        </a>
+        <h3>
+          <a href={contentUrl} target="_blank" rel="noopener noreferrer">
+            {header}
+          </a>
+        </h3>
       </header>
       {content && <ReactMarkdown>{content}</ReactMarkdown>}
       <div style={NotFirstStyles}>
