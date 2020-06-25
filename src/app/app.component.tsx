@@ -171,7 +171,7 @@ export namespace App {
 
     return (
       <section style={{ marginBottom: "2em", marginTop: "5em" }}>
-        <p style={{ marginBottom: "2em" }}>
+        <div style={{ marginBottom: "2em" }}>
           <input
             type="text"
             value={search}
@@ -192,8 +192,8 @@ export namespace App {
                 0 22.3px 17.9px rgba(0, 0, 0, 0.072)`,
             }}
           />
-        </p>
-        <p>
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
           {sortedTags.map((tag, i) => (
             <Tag.Component
               key={`${i}_${tag}`}
@@ -206,7 +206,7 @@ export namespace App {
               }
             />
           ))}
-        </p>
+        </div>
       </section>
     );
   }

@@ -37,7 +37,7 @@ export namespace Tag {
     background: "#ddd",
     borderRadius: ".5em",
     padding: "calc(.5em - 2px) .5em .5em .5em",
-    marginRight: ".5em",
+    margin: "0 .5em .5em 0",
   };
 
   export const InteractiveStyle = {
