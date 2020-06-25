@@ -40,10 +40,8 @@ export namespace App {
     useEffect(() => {
       (async function fetchReadmeMd() {
         const readmeMdUrl =
-          process.env.NODE_ENV === "development" ||
-          process.env.NODE_ENV === "test"
-            ? "/dev-howtos/README.md"
-            : "https://rawcdn.githack.com/fea17e86/dev-howtos/c3ad962c7985940533a9b9fd4340853b1b264e34/README.md";
+          process.env.REACT_APP_README_URL ??
+          "https://raw.githubusercontent.com/fea17e86/dev-howtos/master/README.md";
 
         const response = await fetch(readmeMdUrl);
         const redmeaMd = await response.text();
