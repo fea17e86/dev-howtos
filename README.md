@@ -35,6 +35,10 @@ function toArrayBuffer(pdfBinaryString: string) {
 }
 ```
 
+### [Converting JavaScript callbacks to Promise and Async-Await](https://medium.com/javascript-in-plain-english/converting-javascript-callbacks-to-promise-and-async-await-replacing-async-waterfall-method-with-3c8b7487e0b9)[browser-api,javascript,async-await,callback,promise]
+
+On regular day of a developer, we have to convert quite a bit of legacy code that uses traditional callbacks to Promises and async-await, both for taking advantage of the latest features of ES6 and also to avoid callback-hell and making the code more beautiful and compact and human readable.
+
 ## Git
 
 ### [Delete all branches except master](https://www.hacksparrow.com/git/delete-all-branches-except-master.html)[git]
