@@ -6,6 +6,7 @@ A little list containing tutorials and solutions for development problems
   - [Use FileSaver to save PDFs[browser-api,file-saver,blob,array-buffer]](#use-filesaver-to-save-pdfsbrowser-apifile-saverblobarray-buffer)
 - [Git](#git)
   - [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
+- [HTTP](#http)
 - [React](#react)
 - [Typescript](#typescript)
   - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
@@ -45,11 +46,68 @@ On regular day of a developer, we have to convert quite a bit of legacy code tha
 
 During the normal course of a project, git repositories can accumulate a number of branches locally. A few branches may be fine, but sometimes they can pile up and lead to an unacceptably large number of branches. That's when it is time for a branch clean up!
 
+## HTTP
+
+### [Content-Security-Ploicy Header (CSP)](https://content-security-policy.com/)[csp,http,security]
+
+The new Content-Security-Policy HTTP response header helps you reduce XSS risks on modern browsers by declaring, which dynamic resources are allowed to load.
+
 ## React
 
 ### [Runtime environment variables — create-react-app](https://medium.com/@andrewmclagan_64462/runtime-environment-variables-create-react-app-84f7c261856c)[react,create-react-app,env]
 
 We simply need to create static JSON containing the white listed `REACT_APP` variables when the app starts. To do this [`react-env`](https://github.com/andrewmclagan/react-env) reads your environment as per the CRA standards and generates a `env.js` file before you app starts. This file can be statically served during development or in production. The environment configuration will be available via `window._env`. Simple.
+
+### [Content Security Policy (CSP) in Create-React-App (CRA)](https://medium.com/@nrshahri/csp-cra-324dd83fe5ff)[create-react-app,csp,http,react,security,webpack]
+
+Writing suitable CSP policy may require some changes to your app build pipeline to fetch and calculate hashes for inline scripts and styles, which are used.
+
+I encountered a few challenges with restrictiions through CSPs:
+- Some libraries, for example `@fortawesome/react-fontawesome`, use inline styling. That means I had to use the `'unsafe-inline'` `style-src` policy.
+- For the `'unsafe-inline'` policy to work no `hash` or `nonce` `style-src` policies are allowed.
+- I had to add the `data:` policy to `connect-src` otherwise the `libsodium` library couldn't load it's `octet-stream`.
+- Last but not least I had to add the `'unsafe-eval'` policy to `script-src` because otherwise the WebAssembly module for the `argon2-browser` library couldn't be used.
+
+As you can see there were quite a few restrictions. To be fair, I have not enough knowledge about CSP, WebAssembly or Webpack to guarantee that there is no other solutions to those issues. Here is my `config-overrides.js` for `react-app-rewired` to adjust the `webpack` configuration.
+
+```javascript
+const { override } = require("customize-cra");
+const cspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
+
+const cspConfigPolicy = {
+  "default-src": "'self'",
+  "connect-src": [
+    "'self'",
+    "backend-api-url.com",
+    "data:",
+  ],
+  "script-src": ["'self'", "'unsafe-eval'"],
+  "style-src": ["'self'", "'unsafe-inline'"],
+};
+
+const cspOptions = {
+  hashEnabled: {
+    "script-src": true,
+    "style-src": false,
+  },
+  nonceEnabled: {
+    "script-src": true,
+    "style-src": false,
+  },
+};
+
+function addCspHtmlWebpackPlugin(config) {
+  if (process.env.NODE_ENV === "production") {
+    config.plugins.push(new cspHtmlWebpackPlugin(cspConfigPolicy, cspOptions));
+  }
+
+  return config;
+}
+
+module.exports = {
+  webpack: override(addCspHtmlWebpackPlugin),
+};
+```
 
 ## Typescript
 
