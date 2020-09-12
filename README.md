@@ -116,6 +116,23 @@ It’s time that you took your applications out of development and into producti
 
 In this tutorial, we’ll demonstrate how to deploy a React application in eight different ways. All the services described in this post are completely free with no hidden credit card requirements.
 
+### [Examples of large production-grade, open-source React apps](https://maxrozen.com/examples-of-large-production-grade-open-source-react-apps/)[react,real-world-app]
+
+It’s bloody hard to find a good example of a large production-grade, open-source React app.
+
+There are a few reasons for this:
+
+1. No one writes amazing code the first time they write it
+   - Experienced product engineers know there’s a trade-off between quality and getting features in the hands of customers. You’re more likely to find ugly tech debt with a //TODO: Improve this later! comment than best practices
+
+2. Most companies keep their apps in private repos
+   - Trade secrets and all that jazz.
+
+3. There’s a lot of beginner-grade repos out there
+   - Without a ton of experience, it’s hard to tell the good from the bad
+
+On that note, I’ve reviewed the following well-known open-source React apps, and reckon they’re worth checking out.
+
 ## Testing
 
 ### [How to Test React Components: the Complete Guide](https://www.freecodecamp.org/news/testing-react-hooks/)[testing,react,enzyme,react-testing-library,cypress,ci]
