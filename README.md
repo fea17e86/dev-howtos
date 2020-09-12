@@ -110,6 +110,12 @@ module.exports = {
 };
 ```
 
+### [8 ways to deploy a React app for free](https://blog.logrocket.com/8-ways-to-deploy-a-react-app-for-free/)[react,deployment]
+
+It’s time that you took your applications out of development and into production. The process of deploying an application built on top of a framework such as React, Vue, or Angular is much different from that of deploying a site built with HTML, CSS, and JavaScript.
+
+In this tutorial, we’ll demonstrate how to deploy a React application in eight different ways. All the services described in this post are completely free with no hidden credit card requirements.
+
 ## Testing
 
 ### [How to Test React Components: the Complete Guide](https://www.freecodecamp.org/news/testing-react-hooks/)[testing,react,enzyme,react-testing-library,cypress,ci]
