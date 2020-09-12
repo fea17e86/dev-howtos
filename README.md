@@ -152,6 +152,14 @@ You can find the completed project here:
 
 https://github.com/iqbal125/react-hooks-testing-complete
 
+### [An in-depth beginner's guide to testing React applications](https://jkettmann.com/beginners-guide-to-testing-react/)[testing,jest,mocking,react,react-testing-library]
+
+Unfortunately, writing tests can be a real struggle for beginners. It's like developing in a completely new environment. You may not know what to test. You might spend hours to write a simple test case because you hit error after error. You're used to developing in the browser and it's great dev tools. But testing just doesn't work the same way.
+
+It doesn't have to be that difficult though. With the right approach, you can start writing tests with confidence even as a beginner.
+
+The goal of this blog post is to act as a guide for your first tests. We'll take a small application as an example and cover it with tests. We will discuss what we should test and why we should test it. We will see different techniques that can help us to write tests with confidence without relying on trial and error.
+
 ## Typescript
 
 ### [Releasing a library written in TypeScript on NPM (YouTube)](https://youtu.be/T_4CCdkN468)[typescript,build,library]
