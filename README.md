@@ -8,6 +8,7 @@ A little list containing tutorials and solutions for development problems
   - [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
 - [HTTP](#http)
 - [React](#react)
+- [Testing](#testing)
 - [Typescript](#typescript)
   - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
   - [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
@@ -108,6 +109,18 @@ module.exports = {
   webpack: override(addCspHtmlWebpackPlugin),
 };
 ```
+
+## Testing
+
+### [How to Test React Components: the Complete Guide](https://www.freecodecamp.org/news/testing-react-hooks/)[testing,react,enzyme,react-testing-library,cypress,ci]
+
+Complete Guide, huh, are you going to cover every possible testing scenario? Of course not. However, it will be a complete foundational guide to testing and will be enough to build off of for most other edge cases.
+
+Also I have curated an extensive collection of blog posts, articles and tutorials in the further reading section at the end that should give you enough knowledge to be in the top 10% of developers in terms of testing.
+
+You can find the completed project here:
+
+https://github.com/iqbal125/react-hooks-testing-complete
 
 ## Typescript
 
