@@ -32,7 +32,7 @@ export namespace App {
 
     const tags = useMemo(() => {
       return articles.reduce(
-        (tagSet, { tags }) => new Set<string>([...Array.from(tagSet), ...tags]),
+        (tagSet, { tags }: { tags: string[] }) => new Set<string>([...Array.from(tagSet), ...tags]),
         new Set<string>()
       );
     }, [articles]);
@@ -40,8 +40,7 @@ export namespace App {
     useEffect(() => {
       (async function fetchReadmeMd() {
         const readmeMdUrl =
-          process.env.REACT_APP_README_URL ??
-          "https://raw.githubusercontent.com/fea17e86/dev-howtos/master/README.md";
+          process.env.REACT_APP_README_URL ?? "https://raw.githubusercontent.com/fea17e86/dev-howtos/master/README.md";
 
         const response = await fetch(readmeMdUrl);
         const redmeaMd = await response.text();
@@ -58,21 +57,14 @@ export namespace App {
     );
 
     function selectTag(tag: string) {
-      const nextSelectedTags = new Set<string>([
-        ...Array.from(selectedTags),
-        tag,
-      ]);
+      const nextSelectedTags = new Set<string>([...Array.from(selectedTags), tag]);
       push(AppRoute.create(nextSelectedTags, search));
     }
 
     function toggleTag(tag: string) {
       let nextSelectedTags = selectedTags;
       if (selectedTags.has(tag)) {
-        nextSelectedTags = new Set<string>([
-          ...Array.from(selectedTags).filter(
-            (selectedTag) => selectedTag !== tag
-          ),
-        ]);
+        nextSelectedTags = new Set<string>([...Array.from(selectedTags).filter((selectedTag) => selectedTag !== tag)]);
       } else {
         nextSelectedTags = new Set<string>([...Array.from(selectedTags), tag]);
       }
@@ -94,15 +86,7 @@ export namespace App {
     children: (props: ComponentProps) => JSX.Element;
   }
 
-  export function Component({
-    articles,
-    search,
-    selectedTags,
-    selectTag,
-    setSearch,
-    tags,
-    toggleTag,
-  }: ComponentProps) {
+  export function Component({ articles, search, selectedTags, selectTag, setSearch, tags, toggleTag }: ComponentProps) {
     return (
       <div
         style={{
@@ -120,12 +104,7 @@ export namespace App {
           onTagClick={toggleTag}
           onSearchChange={setSearch}
         />
-        <Main
-          articles={articles}
-          search={search}
-          selectedTags={selectedTags}
-          selectTag={selectTag}
-        />
+        <Main articles={articles} search={search} selectedTags={selectedTags} selectTag={selectTag} />
       </div>
     );
   }
@@ -140,16 +119,9 @@ export namespace App {
     toggleTag: (tag: string) => void;
   }
 
-  export function Header({
-    selectedTags,
-    tags,
-    onTagClick,
-    ...props
-  }: HeaderProps) {
+  export function Header({ selectedTags, tags, onTagClick, ...props }: HeaderProps) {
     const [search, setSearch] = useState<string>(props.search ?? "");
-    const onSearchChange = useDelayedCallback<string | undefined>(
-      props.onSearchChange
-    );
+    const onSearchChange = useDelayedCallback<string | undefined>(props.onSearchChange);
 
     const sortedTags = useMemo(() => {
       return Array.from(tags).sort((a: string, b: string) => {
@@ -199,11 +171,7 @@ export namespace App {
               key={`${i}_${tag}`}
               value={tag}
               onClick={onTagClick}
-              style={
-                selectedTags.has(tag)
-                  ? { background: "blue", color: "white" }
-                  : { opacity: 0.6 }
-              }
+              style={selectedTags.has(tag) ? { background: "blue", color: "white" } : { opacity: 0.6 }}
             />
           ))}
         </div>
@@ -219,12 +187,7 @@ export namespace App {
     tags: Set<string>;
   }
 
-  export function Main({
-    articles,
-    search,
-    selectedTags,
-    selectTag,
-  }: MainProps) {
+  export function Main({ articles, search, selectedTags, selectTag }: MainProps) {
     const isArticleAccepted = useCallback(
       Article.createIsArticleAccepted({
         search,
@@ -233,26 +196,21 @@ export namespace App {
       [search, selectedTags]
     );
 
-    const filteredArticles = useMemo(() => articles.filter(isArticleAccepted), [
-      articles,
-      isArticleAccepted,
-    ]);
+    const filteredArticles = useMemo(() => articles.filter(isArticleAccepted), [articles, isArticleAccepted]);
 
     return (
       <main>
-        {filteredArticles.map(
-          ({ url, text, tags, content }: Article.Type, i) => (
-            <Article.Component
-              key={`${i}_${url}`}
-              contentUrl={url}
-              header={text || url}
-              tags={tags}
-              onTagClick={selectTag}
-            >
-              {content}
-            </Article.Component>
-          )
-        )}
+        {filteredArticles.map(({ url, text, tags, content }: Article.Type, i) => (
+          <Article.Component
+            key={`${i}_${url}`}
+            contentUrl={url}
+            header={text || url}
+            tags={tags}
+            onTagClick={selectTag}
+          >
+            {content}
+          </Article.Component>
+        ))}
       </main>
     );
   }
