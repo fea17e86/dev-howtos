@@ -2,18 +2,28 @@ A little list containing tutorials and solutions for development problems
 
 [To the App](https://fea17e86.github.io/dev-howtos) with search and filter functionality
 
-- [Architecture](#architecture)
-- [Browser API](#browser-api)
-  - [Use FileSaver to save PDFs[browser-api,file-saver,blob,array-buffer]](#use-filesaver-to-save-pdfsbrowser-apifile-saverblobarray-buffer)
-- [Git](#git)
-  - [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
-- [HTTP](#http)
-- [React](#react)
-- [Testing](#testing)
-- [Typescript](#typescript)
-  - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
-  - [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
-  
+1. [Architecture](#architecture)
+   1. [Client-Side Architecture Basics[architecture,frontend,model-view-presenter,observer,react]](#client-side-architecture-basicsarchitecturefrontendmodel-view-presenterobserverreact)
+2. [Browser API](#browser-api)
+   1. [Use FileSaver to save PDFs[browser-api,file-saver,blob,array-buffer]](#use-filesaver-to-save-pdfsbrowser-apifile-saverblobarray-buffer)
+   2. [Converting JavaScript callbacks to Promise and Async-Await[browser-api,javascript,async-await,callback,promise]](#converting-javascript-callbacks-to-promise-and-async-awaitbrowser-apijavascriptasync-awaitcallbackpromise)
+3. [Git](#git)
+   1. [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
+4. [HTTP](#http)
+   1. [Content-Security-Ploicy Header (CSP)[csp,http,security]](#content-security-ploicy-header-cspcsphttpsecurity)
+5. [React](#react)
+   1. [Runtime environment variables — create-react-app[react,create-react-app,env]](#runtime-environment-variables--create-react-appreactcreate-react-appenv)
+   2. [Content Security Policy (CSP) in Create-React-App (CRA)[create-react-app,csp,http,react,security,webpack]](#content-security-policy-csp-in-create-react-app-cracreate-react-appcsphttpreactsecuritywebpack)
+   3. [8 ways to deploy a React app for free[react,deployment]](#8-ways-to-deploy-a-react-app-for-freereactdeployment)
+   4. [Examples of large production-grade, open-source React apps[react,real-world-app]](#examples-of-large-production-grade-open-source-react-appsreactreal-world-app)
+   5. [State Machines in React[react,state,state-machine,xstate]](#state-machines-in-reactreactstatestate-machinexstate)
+6. [Testing](#testing)
+   1. [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
+   2. [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
+7. [Typescript](#typescript)
+   1. [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
+   2. [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
+
 ## Architecture
 
 ### [Client-Side Architecture Basics](https://khalilstemmler.com/articles/client-side-architecture/introduction/)[architecture,frontend,model-view-presenter,observer,react]
@@ -71,6 +81,7 @@ We simply need to create static JSON containing the white listed `REACT_APP` var
 Writing suitable CSP policy may require some changes to your app build pipeline to fetch and calculate hashes for inline scripts and styles, which are used.
 
 I encountered a few challenges with restrictiions through CSPs:
+
 - Some libraries, for example `@fortawesome/react-fontawesome`, use inline styling. That means I had to use the `'unsafe-inline'` `style-src` policy.
 - For the `'unsafe-inline'` policy to work no `hash` or `nonce` `style-src` policies are allowed.
 - I had to add the `data:` policy to `connect-src` otherwise the `libsodium` library couldn't load it's `octet-stream`.
@@ -84,11 +95,7 @@ const cspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
 
 const cspConfigPolicy = {
   "default-src": "'self'",
-  "connect-src": [
-    "'self'",
-    "backend-api-url.com",
-    "data:",
-  ],
+  "connect-src": ["'self'", "backend-api-url.com", "data:"],
   "script-src": ["'self'", "'unsafe-eval'"],
   "style-src": ["'self'", "'unsafe-inline'"],
 };
@@ -130,15 +137,22 @@ It’s bloody hard to find a good example of a large production-grade, open-sour
 There are a few reasons for this:
 
 1. No one writes amazing code the first time they write it
+
    - Experienced product engineers know there’s a trade-off between quality and getting features in the hands of customers. You’re more likely to find ugly tech debt with a //TODO: Improve this later! comment than best practices
 
 2. Most companies keep their apps in private repos
+
    - Trade secrets and all that jazz.
 
 3. There’s a lot of beginner-grade repos out there
+
    - Without a ton of experience, it’s hard to tell the good from the bad
 
 On that note, I’ve reviewed the following well-known open-source React apps, and reckon they’re worth checking out.
+
+### [State Machines in React](https://mastery.games/post/state-machines-in-react/)[react,state,state-machine,xstate]
+
+One of the biggest pain points when developing an app is the tricky business of managing state. Many bugs are caused by things getting into unexpected states, or by race conditions. Finite state machines can help eliminate both types of bugs entirely, while providing a welcome, structured way to build components.
 
 ## Testing
 
