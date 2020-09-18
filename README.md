@@ -20,6 +20,7 @@
    6. [State Management](#state-management)
       1. [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
       2. [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
+      3. [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
    7. [Testing](#testing)
       1. [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
       2. [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
@@ -180,6 +181,16 @@ CHECKING: {
   }
 }
 ```
+
+### [Multistep form handling with Finite State Machines, Formik and TypeScript](https://thewidlarzgroup.com/multistep-form-xstate-formik/)[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]
+
+Lately, I had a chance to work on a mobile app that utilizes this concept of finite state machines. Having no prior knowledge on such thing as a state machine, I quickly got to liking it!
+
+Basically, the concept of such state machines is that we have a finite number of states and we can transition between these states while also exchanging some data. We can declare multiple machines which can handle different tasks and behave in a different way, as well as declare some universal ones that can be re-used. That being said, we can think of our app as a combination of state machines that, based on their states, render different parts of UI. For example, fetching data from the back-end - we are either in a fetching state (we can render some kind of a loader at this time) or in a done state where we can display all the fetched data along with some kind of information about our request status, e.g. whether it was successful or not.
+
+If you want to start developing an app based on state machines, there’s this cool library called XState - the one that I used in the aforementioned project and got familiar with (but not entirely, at least yet! 🙂).
+
+In this article, I will try to share some knowledge about it with you. We will develop a simple React Native app, which handles multi-step forms. Apart from XState, we will use Formik and TypeScript.
 
 ## Testing
 
