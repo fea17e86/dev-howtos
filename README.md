@@ -68,6 +68,28 @@ On regular day of a developer, we have to convert quite a bit of legacy code tha
 
 During the normal course of a project, git repositories can accumulate a number of branches locally. A few branches may be fine, but sometimes they can pile up and lead to an unacceptably large number of branches. That's when it is time for a branch clean up!
 
+First, make sure you are on master:
+
+```sh
+$ git checkout master
+```
+
+Then run this command:
+
+```sh
+$ git branch | grep -v '^*' | xargs git branch -D
+```
+
+It will delete all the local branches, whether they have been merged to master or not.
+
+Now, what if you want to be a little less adventurous and delete only branches that have been merged to master?
+
+This command will do that for you:
+
+```sh
+$ git branch | grep -v '^*' | xargs git branch -d
+```
+
 ## HTTP
 
 ### [Content-Security-Ploicy Header (CSP)](https://content-security-policy.com/)[csp,http,security]
