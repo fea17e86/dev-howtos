@@ -21,6 +21,7 @@
       1. [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
       2. [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
       3. [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
+      4. [MobX with XState for elegent React State Management (video)[state-management,mobx,react,state-machine,xstate]](#mobx-with-xstate-for-elegent-react-state-management-videostate-managementmobxreactstate-machinexstate)
    7. [Testing](#testing)
       1. [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
       2. [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
@@ -71,13 +72,13 @@ During the normal course of a project, git repositories can accumulate a number 
 First, make sure you are on master:
 
 ```sh
-$ git checkout master
+git checkout master
 ```
 
 Then run this command:
 
 ```sh
-$ git branch | grep -v '^*' | xargs git branch -D
+git branch | grep -v '^*' | xargs git branch -D
 ```
 
 It will delete all the local branches, whether they have been merged to master or not.
@@ -87,7 +88,7 @@ Now, what if you want to be a little less adventurous and delete only branches t
 This command will do that for you:
 
 ```sh
-$ git branch | grep -v '^*' | xargs git branch -d
+git branch | grep -v '^*' | xargs git branch -d
 ```
 
 ## HTTP
@@ -213,6 +214,8 @@ Basically, the concept of such state machines is that we have a finite number of
 If you want to start developing an app based on state machines, there’s this cool library called XState - the one that I used in the aforementioned project and got familiar with (but not entirely, at least yet! 🙂).
 
 In this article, I will try to share some knowledge about it with you. We will develop a simple React Native app, which handles multi-step forms. Apart from XState, we will use Formik and TypeScript.
+
+### [MobX with XState for elegent React State Management (video)](https://youtu.be/Va_d5JmDHnA?t=480)[state-management,mobx,react,state-machine,xstate]
 
 ## Testing
 
