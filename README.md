@@ -12,6 +12,7 @@
       1. [Stop using CSS in JavaScript for web development[css,css-in-js,css-modules,styled-components]](#stop-using-css-in-javascript-for-web-developmentcsscss-in-jscss-modulesstyled-components)
       2. [Why I Write CSS in JavaScript[css,css-in-js,styled-components]](#why-i-write-css-in-javascriptcsscss-in-jsstyled-components)
       3. [Styled Components vs. CSS Stylesheets[css,css-in-js,css-modules,styled-components]](#styled-components-vs-css-stylesheetscsscss-in-jscss-modulesstyled-components)
+      4. [EQCSS (Element Queries CSS)[css]](#eqcss-element-queries-csscss)
    4. [Git](#git)
       1. [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
    5. [HTTP](#http)
@@ -109,6 +110,16 @@ There’s a hot debate around standard CSS stylesheets vs. “CSS-in-JS” solut
 - Integration With Legacy CSS Can Be Painful
 - Potentially a "Fad"
 - Performance
+
+### [EQCSS (Element Queries CSS)](https://elementqueries.com/)[css]
+
+Element queries are a new way of thinking about responsive web design where the responsive conditions apply to elements on the page instead of the width or height of the browser.
+
+Unlike CSS @media queries, @element Queries are aware of more than just the width and height of the browser, you can write responsive conditions for a number of different situations like how many characters of text or child elements an element contains.
+
+Another concept that element queries brings to CSS is the idea of ‘scoping’ your styles to one element in the same way that JavaScript functions define a new scope for the variables they contain.
+
+QCSS is a JavaScript plugin that lets you write element queries inside CSS today. With performance in mind, this plugin is written in pure JavaScript, so it doesn't require jQuery or any other libraries on your page in order to function - add [EQCSS.js](https://github.com/eqcss/eqcss) to your HTML and you’re ready to get started!
 
 ## Git
 
