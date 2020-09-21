@@ -11,7 +11,7 @@
    3. [CSS](#css)
       1. [Stop using CSS in JavaScript for web development[css,css-in-js,css-modules,styled-components]](#stop-using-css-in-javascript-for-web-developmentcsscss-in-jscss-modulesstyled-components)
       2. [Why I Write CSS in JavaScript[css,css-in-js,styled-components]](#why-i-write-css-in-javascriptcsscss-in-jsstyled-components)
-      3. [Styled Components vs. CSS Stylesheets[css,css-in-js,css-modules,styled-components]](#styled-components-vs-css-stylesheetscsscss-in-jscss-modulesstyled-components)
+      3. [Styled Components vs. CSS Stylesheets[css,css-in-js,styled-components]](#styled-components-vs-css-stylesheetscsscss-in-jscss-modulesstyled-components)
       4. [EQCSS (Element Queries CSS)[css]](#eqcss-element-queries-csscss)
    4. [Git](#git)
       1. [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
@@ -91,7 +91,7 @@ Primarily, CSS-in-JS boosts my confidence. I can add, change and delete CSS with
 - **Fast Performance**: Send only the critical CSS to the user for a rapid first paint.
 - **Dynamic Styling**: Simply style your components with a global theme or based on different states.
 
-### [Styled Components vs. CSS Stylesheets](https://getstream.io/blog/styled-components-vs-css-stylesheets/)[css,css-in-js,css-modules,styled-components]
+### [Styled Components vs. CSS Stylesheets](https://getstream.io/blog/styled-components-vs-css-stylesheets/)[css,css-in-js,styled-components]
 
 There’s a hot debate around standard CSS stylesheets vs. “CSS-in-JS” solutions when building in modern front-end frameworks. In this post, I’m going to weigh up the pros and cons of CSS vs. Styled Components and how it affects the way I write React components.
 
