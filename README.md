@@ -8,24 +8,28 @@
    2. [Browser API](#browser-api)
       1. [Use FileSaver to save PDFs[browser-api,file-saver,blob,array-buffer]](#use-filesaver-to-save-pdfsbrowser-apifile-saverblobarray-buffer)
       2. [Converting JavaScript callbacks to Promise and Async-Await[browser-api,javascript,async-await,callback,promise]](#converting-javascript-callbacks-to-promise-and-async-awaitbrowser-apijavascriptasync-awaitcallbackpromise)
-   3. [Git](#git)
+   3. [CSS](#css)
+      1. [Stop using CSS in JavaScript for web development[css,css-in-js,css-modules,styled-components]](#stop-using-css-in-javascript-for-web-developmentcsscss-in-jscss-modulesstyled-components)
+      2. [Why I Write CSS in JavaScript[css,css-in-js,styled-components]](#why-i-write-css-in-javascriptcsscss-in-jsstyled-components)
+      3. [Styled Components vs. CSS Stylesheets[css,css-in-js,css-modules,styled-components]](#styled-components-vs-css-stylesheetscsscss-in-jscss-modulesstyled-components)
+   4. [Git](#git)
       1. [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
-   4. [HTTP](#http)
+   5. [HTTP](#http)
       1. [Content-Security-Ploicy Header (CSP)[csp,http,security]](#content-security-ploicy-header-cspcsphttpsecurity)
-   5. [React](#react)
+   6. [React](#react)
       1. [Runtime environment variables — create-react-app[react,create-react-app,env]](#runtime-environment-variables--create-react-appreactcreate-react-appenv)
       2. [Content Security Policy (CSP) in Create-React-App (CRA)[create-react-app,csp,http,react,security,webpack]](#content-security-policy-csp-in-create-react-app-cracreate-react-appcsphttpreactsecuritywebpack)
       3. [8 ways to deploy a React app for free[react,deployment]](#8-ways-to-deploy-a-react-app-for-freereactdeployment)
       4. [Examples of large production-grade, open-source React apps[react,real-world-app]](#examples-of-large-production-grade-open-source-react-appsreactreal-world-app)
-   6. [State Management](#state-management)
+   7. [State Management](#state-management)
       1. [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
       2. [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
       3. [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
       4. [MobX with XState for elegent React State Management (video)[state-management,mobx,react,state-machine,xstate]](#mobx-with-xstate-for-elegent-react-state-management-videostate-managementmobxreactstate-machinexstate)
-   7. [Testing](#testing)
+   8. [Testing](#testing)
       1. [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
       2. [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
-   8. [Typescript](#typescript)
+   9. [Typescript](#typescript)
       1. [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
       2. [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
 
@@ -62,6 +66,49 @@ function toArrayBuffer(pdfBinaryString: string) {
 ### [Converting JavaScript callbacks to Promise and Async-Await](https://medium.com/javascript-in-plain-english/converting-javascript-callbacks-to-promise-and-async-await-replacing-async-waterfall-method-with-3c8b7487e0b9)[browser-api,javascript,async-await,callback,promise]
 
 On regular day of a developer, we have to convert quite a bit of legacy code that uses traditional callbacks to Promises and async-await, both for taking advantage of the latest features of ES6 and also to avoid callback-hell and making the code more beautiful and compact and human readable.
+
+## CSS
+
+### [Stop using CSS in JavaScript for web development](https://medium.com/@gajus/stop-using-css-in-javascript-for-web-development-fa32fb873dcc)[css,css-in-js,css-modules,styled-components]
+
+CSS isn’t going anywhere. A lot of the projects choose to style documents in JavaScript for wrong reasons. This article lists common misconceptions (myths) and the existing CSS solutions to those problems.
+
+`styled-components` (just like CSS modules) take away the responsibility of the naming away from the human. Humans make mistakes; computers make them less often so.
+On its own, it is not a good enough reason to start using `styled-components`.
+
+Most (if not all) of these things can be addressed long term, either by the community, changes in React or in `styled-components` itself. But whats the point? CSS is already widely supported, it has massive community around it and it just works.
+The point of this article is not to deter the reader from using “CSS” in JavaScript or from using `styled-components`. Styling using `styled-components` has a great use case: a better cross-platform support. Don’t use it for wrong reasons.
+
+Use CSS with either of the naming conventions (I recommend [BEM](http://getbem.com/)). If you are worried about class name collisions (or too lazy to use BEM), use [CSS modules](https://github.com/css-modules/css-modules). If you are developing for React web, consider using [babel-plugin-react-css-modules](https://github.com/gajus/babel-plugin-react-css-modules). If you are developing for React native, [styled-components](https://styled-components.com/) is great.
+
+### [Why I Write CSS in JavaScript](https://mxstbr.com/thoughts/css-in-js)[css,css-in-js,styled-components]
+
+Primarily, CSS-in-JS boosts my confidence. I can add, change and delete CSS without any unexpected consequences. My changes to the styling of a component will not affect anything else. If I delete a component, I delete its CSS too. No more [append-only stylesheets](https://css-tricks.com/oh-no-stylesheet-grows-grows-grows-append-stylesheet-problem/)! ✨
+
+- **Confidence**: Add, change and delete CSS without any unexpected consequences and avoid dead code.
+- **Painless Maintenance**: Never go on a hunt for CSS affecting your components ever again.
+- **Enhanced Teamwork**: Avoid common CSS frustrations to keep a neat codebase and moving quickly, regardless of experience levels.
+- **Fast Performance**: Send only the critical CSS to the user for a rapid first paint.
+- **Dynamic Styling**: Simply style your components with a global theme or based on different states.
+
+### [Styled Components vs. CSS Stylesheets](https://getstream.io/blog/styled-components-vs-css-stylesheets/)[css,css-in-js,css-modules,styled-components]
+
+There’s a hot debate around standard CSS stylesheets vs. “CSS-in-JS” solutions when building in modern front-end frameworks. In this post, I’m going to weigh up the pros and cons of CSS vs. Styled Components and how it affects the way I write React components.
+
+**Pros**
+
+- No Globally Scoped Selectors
+- Consistency
+- Sass Syntax Out-Of-The-Box
+- Theming
+- Dynamic Styling
+
+**Cons**
+
+- Learning Curve
+- Integration With Legacy CSS Can Be Painful
+- Potentially a "Fad"
+- Performance
 
 ## Git
 
