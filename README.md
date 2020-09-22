@@ -11,7 +11,7 @@
    3. [CSS](#css)
       1. [Stop using CSS in JavaScript for web development[css,css-in-js,css-modules,styled-components]](#stop-using-css-in-javascript-for-web-developmentcsscss-in-jscss-modulesstyled-components)
       2. [Why I Write CSS in JavaScript[css,css-in-js,styled-components]](#why-i-write-css-in-javascriptcsscss-in-jsstyled-components)
-      3. [Styled Components vs. CSS Stylesheets[css,css-in-js,styled-components]](#styled-components-vs-css-stylesheetscsscss-in-jscss-modulesstyled-components)
+      3. [Styled Components vs. CSS Stylesheets[css,css-in-js,styled-components]](#styled-components-vs-css-stylesheetscsscss-in-jsstyled-components)
       4. [EQCSS (Element Queries CSS)[css]](#eqcss-element-queries-csscss)
    4. [Git](#git)
       1. [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
@@ -23,6 +23,7 @@
       3. [8 ways to deploy a React app for free[react,deployment]](#8-ways-to-deploy-a-react-app-for-freereactdeployment)
       4. [Examples of large production-grade, open-source React apps[react,real-world-app]](#examples-of-large-production-grade-open-source-react-appsreactreal-world-app)
       5. [How to React ⚛️[react]](#how-to-react-️react)
+      6. [The React Cheatsheet for 2020 📄‬ (+ real-world examples)[react,cheatsheet,react-hooks]](#the-react-cheatsheet-for-2020---real-world-examplesreactcheatsheetreact-hooks)
    7. [State Management](#state-management)
       1. [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
       2. [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
@@ -245,6 +246,30 @@ On that note, I’ve reviewed the following well-known open-source React apps, a
 6. [Server Cache Management with react-query](https://kentcdodds.com/blog/how-to-react#server-cache-management-with-react-query)
 7. [Component Styling](https://kentcdodds.com/blog/how-to-react#component-styling)
 8. [And on...](https://kentcdodds.com/blog/how-to-react#and-on)
+
+### [The React Cheatsheet for 2020 📄‬ (+ real-world examples)](https://dev.to/codeartistryio/the-react-cheatsheet-for-2020-real-world-examples-4hgg)[react,cheatsheet,react-hooks]
+
+**Core Concepts**
+
+- Elements and JSX
+- Components and Props
+- Lists and Keys
+- Events and Event Handlers
+
+**React Hooks**
+
+- State and useState
+- Side Effects and useEffect
+- Performance and useCallback
+- Memoization and useMemo
+- Refs and useRef
+
+**Advanced Hooks**
+
+- Context and useContext
+- Reducers and useReducer
+- Writing custom hooks
+- Rules of hooks
 
 ## State Management
 
