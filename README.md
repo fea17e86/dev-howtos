@@ -22,6 +22,7 @@
       2. [Content Security Policy (CSP) in Create-React-App (CRA)[create-react-app,csp,http,react,security,webpack]](#content-security-policy-csp-in-create-react-app-cracreate-react-appcsphttpreactsecuritywebpack)
       3. [8 ways to deploy a React app for free[react,deployment]](#8-ways-to-deploy-a-react-app-for-freereactdeployment)
       4. [Examples of large production-grade, open-source React apps[react,real-world-app]](#examples-of-large-production-grade-open-source-react-appsreactreal-world-app)
+      5. [How to React ⚛️[react]](#how-to-react-️react)
    7. [State Management](#state-management)
       1. [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
       2. [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
@@ -233,6 +234,17 @@ There are a few reasons for this:
    - Without a ton of experience, it’s hard to tell the good from the bad
 
 On that note, I’ve reviewed the following well-known open-source React apps, and reckon they’re worth checking out.
+
+### [How to React ⚛️](https://kentcdodds.com/blog/how-to-react)[react]
+
+1. [Start with JavaScript + Modern JS](https://kentcdodds.com/blog/how-to-react#start-with-javascript--modern-js)
+2. [Next, let's learn React](https://kentcdodds.com/blog/how-to-react#next-lets-learn-react)
+3. [Dependencies and npm](https://kentcdodds.com/blog/how-to-react#dependencies-and-npm)
+4. [Router](https://kentcdodds.com/blog/how-to-react#router)
+5. [State management](https://kentcdodds.com/blog/how-to-react#state-management)
+6. [Server Cache Management with react-query](https://kentcdodds.com/blog/how-to-react#server-cache-management-with-react-query)
+7. [Component Styling](https://kentcdodds.com/blog/how-to-react#component-styling)
+8. [And on...](https://kentcdodds.com/blog/how-to-react#and-on)
 
 ## State Management
 
