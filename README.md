@@ -17,21 +17,22 @@
       1. [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
    5. [HTTP](#http)
       1. [Content-Security-Ploicy Header (CSP)[csp,http,security]](#content-security-ploicy-header-cspcsphttpsecurity)
-   6. [React](#react)
+   6. [JSON](#json)
+   7. [React](#react)
       1. [Runtime environment variables — create-react-app[react,create-react-app,env]](#runtime-environment-variables--create-react-appreactcreate-react-appenv)
       2. [Content Security Policy (CSP) in Create-React-App (CRA)[create-react-app,csp,http,react,security,webpack]](#content-security-policy-csp-in-create-react-app-cracreate-react-appcsphttpreactsecuritywebpack)
       3. [8 ways to deploy a React app for free[react,deployment]](#8-ways-to-deploy-a-react-app-for-freereactdeployment)
       4. [Examples of large production-grade, open-source React apps[react,real-world-app]](#examples-of-large-production-grade-open-source-react-appsreactreal-world-app)
       5. [How to React ⚛️[react]](#how-to-react-️react)
       6. [The React Cheatsheet for 2020 📄‬ (+ real-world examples)[react,cheatsheet,react-hooks]](#the-react-cheatsheet-for-2020---real-world-examplesreactcheatsheetreact-hooks)
-   7. [State Management](#state-management)
+   8. [State Management](#state-management)
       1. [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
       2. [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
       3. [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
-   8. [Testing](#testing)
+   9. [Testing](#testing)
       1. [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
       2. [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
-   9. [Typescript](#typescript)
+   10. [Typescript](#typescript)
       1. [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
       2. [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
 
@@ -155,6 +156,26 @@ git branch | grep -v '^*' | xargs git branch -d
 ### [Content-Security-Ploicy Header (CSP)](https://content-security-policy.com/)[csp,http,security]
 
 The new Content-Security-Policy HTTP response header helps you reduce XSS risks on modern browsers by declaring, which dynamic resources are allowed to load.
+
+## JSON
+
+### [JSON Stringify of Circular Structures](https://stackoverflow.com/a/11616993)[json,json-stringify,circular-structure]
+
+```javascript
+// Note: cache should not be re-used by repeated calls to JSON.stringify.
+var cache = [];
+JSON.stringify(circ, (key, value) => {
+  if (typeof value === 'object' && value !== null) {
+    // Duplicate reference found, discard key
+    if (cache.includes(value)) return;
+
+    // Store value in our collection
+    cache.push(value);
+  }
+  return value;
+});
+cache = null; // Enable garbage collection
+```
 
 ## React
 
