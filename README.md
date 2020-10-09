@@ -161,20 +161,24 @@ The new Content-Security-Policy HTTP response header helps you reduce XSS risks 
 
 ### [JSON Stringify of Circular Structures](https://stackoverflow.com/a/11616993)[json,json-stringify,circular-structure]
 
-```javascript
-// Note: cache should not be re-used by repeated calls to JSON.stringify.
-var cache = [];
-JSON.stringify(circ, (key, value) => {
-  if (typeof value === 'object' && value !== null) {
-    // Duplicate reference found, discard key
-    if (cache.includes(value)) return;
+```typescript
+// custom replacer that uses a local cache
+const createStringifyReplacer = (replacer?: (this: any, key: string, value: any) => any) => (cache: any[]) => (key: string, value: any) => {
+    if (typeof value === "object" && value !== null) {
+      if (cache.includes(value)) return;
+      cache.push(value);
+    }
+    return replacer ? replacer(key, value) : value;
+  };
 
-    // Store value in our collection
-    cache.push(value);
-  }
-  return value;
-});
-cache = null; // Enable garbage collection
+// a wrapper around JSON.stringify, using a custom replacer
+export function stringify(
+  value: any,
+  replacer?: (this: any, key: string, value: any) => any,
+  space?: string | number
+): string {
+  return JSON.stringify(value, createStringifyReplacer(replacer)([]), space);
+}
 ```
 
 ## React
