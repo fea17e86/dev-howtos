@@ -2,39 +2,42 @@
 
 **[To the App](https://fea17e86.github.io/dev-howtos) with search and filter functionality**
 
-1. [A little list containing tutorials and solutions for development problems](#a-little-list-containing-tutorials-and-solutions-for-development-problems)
-   1. [Architecture](#architecture)
-      1. [Client-Side Architecture Basics[architecture,frontend,model-view-presenter,observer,react]](#client-side-architecture-basicsarchitecturefrontendmodel-view-presenterobserverreact)
-   2. [Browser API](#browser-api)
-      1. [Use FileSaver to save PDFs[browser-api,file-saver,blob,array-buffer]](#use-filesaver-to-save-pdfsbrowser-apifile-saverblobarray-buffer)
-      2. [Converting JavaScript callbacks to Promise and Async-Await[browser-api,javascript,async-await,callback,promise]](#converting-javascript-callbacks-to-promise-and-async-awaitbrowser-apijavascriptasync-awaitcallbackpromise)
-   3. [CSS](#css)
-      1. [Stop using CSS in JavaScript for web development[css,css-in-js,css-modules,styled-components]](#stop-using-css-in-javascript-for-web-developmentcsscss-in-jscss-modulesstyled-components)
-      2. [Why I Write CSS in JavaScript[css,css-in-js,styled-components]](#why-i-write-css-in-javascriptcsscss-in-jsstyled-components)
-      3. [Styled Components vs. CSS Stylesheets[css,css-in-js,styled-components]](#styled-components-vs-css-stylesheetscsscss-in-jsstyled-components)
-      4. [EQCSS (Element Queries CSS)[css]](#eqcss-element-queries-csscss)
-   4. [Git](#git)
-      1. [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
-   5. [HTTP](#http)
-      1. [Content-Security-Ploicy Header (CSP)[csp,http,security]](#content-security-ploicy-header-cspcsphttpsecurity)
-   6. [JSON](#json)
-   7. [React](#react)
-      1. [Runtime environment variables — create-react-app[react,create-react-app,env]](#runtime-environment-variables--create-react-appreactcreate-react-appenv)
-      2. [Content Security Policy (CSP) in Create-React-App (CRA)[create-react-app,csp,http,react,security,webpack]](#content-security-policy-csp-in-create-react-app-cracreate-react-appcsphttpreactsecuritywebpack)
-      3. [8 ways to deploy a React app for free[react,deployment]](#8-ways-to-deploy-a-react-app-for-freereactdeployment)
-      4. [Examples of large production-grade, open-source React apps[react,real-world-app]](#examples-of-large-production-grade-open-source-react-appsreactreal-world-app)
-      5. [How to React ⚛️[react]](#how-to-react-️react)
-      6. [The React Cheatsheet for 2020 📄‬ (+ real-world examples)[react,cheatsheet,react-hooks]](#the-react-cheatsheet-for-2020---real-world-examplesreactcheatsheetreact-hooks)
-   8. [State Management](#state-management)
-      1. [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
-      2. [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
-      3. [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
-   9. [Testing](#testing)
-      1. [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
-      2. [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
-   10. [Typescript](#typescript)
-      1. [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
-      2. [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
+- [Architecture](#architecture)
+  - [Client-Side Architecture Basics[architecture,frontend,model-view-presenter,observer,react]](#client-side-architecture-basicsarchitecturefrontendmodel-view-presenterobserverreact)
+- [Browser API](#browser-api)
+  - [Use FileSaver to save PDFs[browser-api,file-saver,blob,array-buffer]](#use-filesaver-to-save-pdfsbrowser-apifile-saverblobarray-buffer)
+  - [Converting JavaScript callbacks to Promise and Async-Await[browser-api,javascript,async-await,callback,promise]](#converting-javascript-callbacks-to-promise-and-async-awaitbrowser-apijavascriptasync-awaitcallbackpromise)
+- [CSS](#css)
+  - [10 Best Practices for Improving Your CSS[css]](#10-best-practices-for-improving-your-csscss)
+  - [Stop using CSS in JavaScript for web development[css,css-in-js,css-modules,styled-components]](#stop-using-css-in-javascript-for-web-developmentcsscss-in-jscss-modulesstyled-components)
+  - [Why I Write CSS in JavaScript[css,css-in-js,styled-components]](#why-i-write-css-in-javascriptcsscss-in-jsstyled-components)
+  - [Styled Components vs. CSS Stylesheets[css,css-in-js,styled-components]](#styled-components-vs-css-stylesheetscsscss-in-jsstyled-components)
+  - [EQCSS (Element Queries CSS)[css]](#eqcss-element-queries-csscss)
+- [Git](#git)
+  - [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
+- [HTTP](#http)
+  - [Content-Security-Ploicy Header (CSP)[csp,http,security]](#content-security-ploicy-header-cspcsphttpsecurity)
+- [JSON](#json)
+  - [JSON Stringify of Circular Structures[json,json-stringify,circular-structure]](#json-stringify-of-circular-structuresjsonjson-stringifycircular-structure)
+- [Kubernetes](#kubernetes)
+  - [Kubectl cheat sheet[kubernets,kubectl,cheat-sheet]](#kubectl-cheat-sheetkubernetskubectlcheat-sheet)
+- [React](#react)
+  - [Runtime environment variables — create-react-app[react,create-react-app,env]](#runtime-environment-variables--create-react-appreactcreate-react-appenv)
+  - [Content Security Policy (CSP) in Create-React-App (CRA)[create-react-app,csp,http,react,security,webpack]](#content-security-policy-csp-in-create-react-app-cracreate-react-appcsphttpreactsecuritywebpack)
+  - [8 ways to deploy a React app for free[react,deployment]](#8-ways-to-deploy-a-react-app-for-freereactdeployment)
+  - [Examples of large production-grade, open-source React apps[react,real-world-app]](#examples-of-large-production-grade-open-source-react-appsreactreal-world-app)
+  - [How to React ⚛️[react]](#how-to-react-️react)
+  - [The React Cheatsheet for 2020 📄‬ (+ real-world examples)[react,cheatsheet,react-hooks]](#the-react-cheatsheet-for-2020---real-world-examplesreactcheatsheetreact-hooks)
+- [State Management](#state-management)
+  - [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
+  - [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
+  - [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
+- [Testing](#testing)
+  - [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
+  - [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
+- [Typescript](#typescript)
+  - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
+  - [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
 
 ## Architecture
 
@@ -112,7 +115,7 @@ On regular day of a developer, we have to convert quite a bit of legacy code tha
 
 10. Compress
 
-   Compression removes comments and whitespaces your bundles require less bandwidth to fetch.
+    Compression removes comments and whitespaces your bundles require less bandwidth to fetch.
 
 ### [Stop using CSS in JavaScript for web development](https://medium.com/@gajus/stop-using-css-in-javascript-for-web-development-fa32fb873dcc)[css,css-in-js,css-modules,styled-components]
 
@@ -205,13 +208,16 @@ The new Content-Security-Policy HTTP response header helps you reduce XSS risks 
 
 ```typescript
 // custom replacer that uses a local cache
-const createStringifyReplacer = (replacer?: (this: any, key: string, value: any) => any) => (cache: any[]) => (key: string, value: any) => {
-    if (typeof value === "object" && value !== null) {
-      if (cache.includes(value)) return;
-      cache.push(value);
-    }
-    return replacer ? replacer(key, value) : value;
-  };
+const createStringifyReplacer = (replacer?: (this: any, key: string, value: any) => any) => (cache: any[]) => (
+  key: string,
+  value: any
+) => {
+  if (typeof value === "object" && value !== null) {
+    if (cache.includes(value)) return;
+    cache.push(value);
+  }
+  return replacer ? replacer(key, value) : value;
+};
 
 // a wrapper around JSON.stringify, using a custom replacer
 export function stringify(
