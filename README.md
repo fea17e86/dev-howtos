@@ -72,6 +72,48 @@ On regular day of a developer, we have to convert quite a bit of legacy code tha
 
 ## CSS
 
+### [10 Best Practices for Improving Your CSS](https://medium.com/better-programming/10-best-practices-for-improving-your-css-84c69aac66e)[css]
+
+1. Do You Really Need a Framework?
+
+   There are now many lightweight alternatives to robust frameworks. Usually, you won’t be using every selector from a framework, so your bundle will contain dead code.
+
+2. Prefer Using a CSS Methodology
+
+   CSS methodologies are used to create consistency in your CSS files. They help in scaling and maintaining your projects.
+
+3. Set Up a Pre-Processor
+
+   A pre-processor is a tool that lets you use advanced features that don’t exist in CSS. These can be things like variables for loops, or even functions.
+
+4. Use Markup Instead of CSS
+
+   Usually, you can reduce the size of your CSS bundles by simply using the correct HTML elements.
+
+5. Use Shorthand Properties
+
+   To further reduce the number of rules, always try to go with shorthand properties.
+
+6. Reduce Redundancy
+
+   Sometimes it’s hard to spot redundancy, especially when repeating rules don’t follow the same order in both selectors. But if your classes differ in just one or two rules, it’s better to outsource those rules and use them as an extra class.
+
+7. Avoid Complex Selectors
+
+   First, your increased specificity will not only make it harder to later rewrite existing rules, but also increase the time it takes for the browser to match selectors.
+
+8. Don’t Remove Outlines
+
+   This is one of the most common mistakes developers make when writing CSS. While you may think there’s nothing wrong about removing the highlight that outlines create, in fact, you’re making the site inaccessible. If the default styling looks bad for your brand, create custom outlines. Just make sure there is some kind of indication when it comes to focusing elements.
+
+9. Use Mobile First
+
+   The mobile-first approach means you start writing CSS for small screen devices first and build from there. This is also called progressive enhancement. How can you tell if you use mobile-first? If your media queries use `min-width`, you’re on the right track.
+
+10. Compress
+
+   Compression removes comments and whitespaces your bundles require less bandwidth to fetch.
+
 ### [Stop using CSS in JavaScript for web development](https://medium.com/@gajus/stop-using-css-in-javascript-for-web-development-fa32fb873dcc)[css,css-in-js,css-modules,styled-components]
 
 CSS isn’t going anywhere. A lot of the projects choose to style documents in JavaScript for wrong reasons. This article lists common misconceptions (myths) and the existing CSS solutions to those problems.
