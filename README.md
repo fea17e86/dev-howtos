@@ -223,6 +223,25 @@ export function stringify(
 }
 ```
 
+## Kubernetes
+
+### [Kubectl cheat sheet](https://unofficial-kubernetes.readthedocs.io/en/latest/user-guide/kubectl-cheatsheet/)[kubernets,kubectl,cheat-sheet]
+
+kubectl version
+kubectl cluster-info
+kubectl get all - Liste aller Ressourcen
+Pods, Services, ...
+kubectl get namespaces - Liste aller Namespaces
+kubectl get all -n <NAMESPACE_ID> - Liste aller Ressourcen eines Namespaces
+kubectl describe -n <NAMESPACE_ID> <RESSOURCE_ID> - Beschreibung einer Ressource eines Namespaces
+kubectl exec -it -n <NAMESPACE_ID> <POD_ID> -c <CONTAINER_ID> -- sh - Führt sh in einem Container aus. Ohne CONTAINER_ID wird der default Container ausgewählt.
+kubectl logs -n <NAMESPACE_ID> <POD_ID> <CONTAINER_ID>
+kubectl get configmap -n <NAMESPACE_ID> <CONFIGMAP_ID> --output yaml|json|name|wide|jsonpath='{.data.SOMETHING}'
+
+Offtopic:
+
+history | grep kubectl
+
 ## React
 
 ### [Runtime environment variables — create-react-app](https://medium.com/@andrewmclagan_64462/runtime-environment-variables-create-react-app-84f7c261856c)[react,create-react-app,env]
