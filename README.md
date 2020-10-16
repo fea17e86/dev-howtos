@@ -20,7 +20,9 @@
 - [JSON](#json)
   - [JSON Stringify of Circular Structures[json,json-stringify,circular-structure]](#json-stringify-of-circular-structuresjsonjson-stringifycircular-structure)
 - [Kubernetes](#kubernetes)
-  - [Kubectl cheat sheet[kubernets,kubectl,cheat-sheet]](#kubectl-cheat-sheetkubernetskubectlcheat-sheet)
+  - [Kubectl Cheat Sheet[kubernetes,kubectl,cheat-sheet]](#kubectl-cheat-sheetkuberneteskubectlcheat-sheet)
+- [Linux](#linux)
+  - [Linux Cheat Sheet[linux,cheat-sheet]](#linux-cheat-sheetlinuxcheat-sheet)
 - [React](#react)
   - [Runtime environment variables — create-react-app[react,create-react-app,env]](#runtime-environment-variables--create-react-appreactcreate-react-appenv)
   - [Content Security Policy (CSP) in Create-React-App (CRA)[create-react-app,csp,http,react,security,webpack]](#content-security-policy-csp-in-create-react-app-cracreate-react-appcsphttpreactsecuritywebpack)
@@ -38,7 +40,6 @@
 - [Typescript](#typescript)
   - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
   - [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
-
 ## Architecture
 
 ### [Client-Side Architecture Basics](https://khalilstemmler.com/articles/client-side-architecture/introduction/)[architecture,frontend,model-view-presenter,observer,react]
@@ -231,22 +232,31 @@ export function stringify(
 
 ## Kubernetes
 
-### [Kubectl cheat sheet](https://unofficial-kubernetes.readthedocs.io/en/latest/user-guide/kubectl-cheatsheet/)[kubernets,kubectl,cheat-sheet]
+### [Kubectl Cheat Sheet](https://unofficial-kubernetes.readthedocs.io/en/latest/user-guide/kubectl-cheatsheet/)[kubernetes,kubectl,cheat-sheet]
 
-kubectl version
-kubectl cluster-info
-kubectl get all - Liste aller Ressourcen
-Pods, Services, ...
-kubectl get namespaces - Liste aller Namespaces
-kubectl get all -n <NAMESPACE_ID> - Liste aller Ressourcen eines Namespaces
-kubectl describe -n <NAMESPACE_ID> <RESSOURCE_ID> - Beschreibung einer Ressource eines Namespaces
-kubectl exec -it -n <NAMESPACE_ID> <POD_ID> -c <CONTAINER_ID> -- sh - Führt sh in einem Container aus. Ohne CONTAINER_ID wird der default Container ausgewählt.
-kubectl logs -n <NAMESPACE_ID> <POD_ID> <CONTAINER_ID>
-kubectl get configmap -n <NAMESPACE_ID> <CONFIGMAP_ID> --output yaml|json|name|wide|jsonpath='{.data.SOMETHING}'
+`kubectl version`
 
-Offtopic:
+`kubectl cluster-info`
 
-history | grep kubectl
+`kubectl get all` - Liste aller Ressourcen des aktuellen Clusters (Pods, Services, ...)
+
+`kubectl get namespaces` - Liste aller Namespaces
+
+`kubectl get all -n <NAMESPACE_ID>` - Liste aller Ressourcen eines Namespaces
+
+`kubectl describe -n <NAMESPACE_ID> <RESSOURCE_ID>` - Beschreibung einer Ressource eines Namespaces
+
+`kubectl exec -it -n <NAMESPACE_ID> <POD_ID> -c <CONTAINER_ID> -- sh` - Führt sh in einem Container aus (ohne CONTAINER_ID wird der default Container ausgewählt)
+
+`kubectl logs -n <NAMESPACE_ID> <POD_ID> <CONTAINER_ID>`
+
+`kubectl get configmap -n <NAMESPACE_ID> <CONFIGMAP_ID> [--output yaml|json|name|wide|jsonpath='{.data.SOMETHING}']`
+
+## Linux
+
+### [Linux Cheat Sheet](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)[linux,cheat-sheet]
+
+`history | grep kubectl` - Listet alle in der Shell getätigten Befehle mit "kubectl" auf
 
 ## React
 
