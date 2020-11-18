@@ -445,6 +445,40 @@ Typescript namespaces have history from pre-modules JS times. Technically you sh
 
 ## UI
 
+### [Gestaltgesetze für digitale Produkte](https://userinterfacedesign.ch/gestaltgesetze/)[ui,gestalt,spacing]
+
+1. Gesetz der Ähnlichkeit
+
+   Gestalten Sie Interface Elemente mit ähnlichen oder gleichen Inhalten / Funktionen immer gleich.
+   
+2. Gesetz der Nähe
+
+   Stellen Sie zusammengehörende Interface Elemente immer möglichst nah beieinander dar.
+   
+3. Gesetz der Prägnanz (guten Gestalt)
+
+   Priorisieren Sie die unterschiedlichen Interface Elemente. Welches Element soll am prägnantesten sein? Tipp: Dieses erkennen Sie, wenn Sie mit zugekniffenen Augen «unscharf» das User Interface betrachten.
+   
+4. Gesetz der Geschlossenheit
+
+   Nutzen Sie das Gesetz der Geschlossenheit, um ähnlich gestaltete Informationen / Funktionen voneinander zu trennen, wenn diese nicht zusammen gehören. Fassen Sie mittels realen, oder kognitiv ergänzten Linien, zusammengehörende Informationen / Funktionen zu einer Einheit zusammen.
+   
+5. Gesetz der Kontinuität
+
+   Wenden Sie die die Wirkung dieses Gesetztes zum Gliedern einzelner Hierarchiestufen an. Inhalte auf der gleichen (erdachten) Fluchtlinie gehören zur gleichen logischen Ebene. Dies ist zum Beispiel bei einer komplexen Navigation hilfreich.
+   
+6. Gesetz des gemeinsamen Schicksals
+
+   Wenden Sie das Gesetz an, um Grundelemente (ruhend) und Figuren (bewegt) zu verdeutlichen.
+   
+7. Gesetz der gemeinsamen Regionen
+
+   Grenzen Sie Elemente, die zusammengehörig sind, mittels hinterlegter Farbfläche oder Konturline, von den anderen Elementen ab.
+   
+8. Gesetz der Verbundenheit
+
+   Wenden Sie das Gesetz der Verbundenheit an, um Elemente, die zusammen eine Einheit bilden, miteinander zu verbinden.
+
 ### [10 Bad Typography Habits that Scream Amateur](https://medium.com/@meetchopz/10-bad-typography-habits-that-scream-amateur-8bac07f9c041)[ui,typography]
 
 1. Center-aligning paragraphs of text
@@ -467,3 +501,5 @@ Typescript namespaces have history from pre-modules JS times. Technically you sh
    - Avoid using characters, use scalable vector icons.
 10. Text Alignment
    - Match your paragraph alignment to that of your design–if you decide to change the text, it will still look correct, and you don’t have to keep on nudging to get the right alignment.
+   
+
