@@ -40,6 +40,8 @@
 - [Typescript](#typescript)
   - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
   - [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
+- [UI](#ui)
+
 ## Architecture
 
 ### [Client-Side Architecture Basics](https://khalilstemmler.com/articles/client-side-architecture/introduction/)[architecture,frontend,model-view-presenter,observer,react]
@@ -440,3 +442,28 @@ Most of us have used or at least heard about TypeScript, but how many have relea
 ### [Using Typescript namespaces in create-react-app](https://ostrowski.ninja/typescript-namespaces-cra/)[typescript,react,create-react-app,babel,rescripts]
 
 Typescript namespaces have history from pre-modules JS times. Technically you should use ES Modules if you can. However there are useful cases to encapsulate your types and data in namespaces. How do they work in modern JS/TS world and can you use them in create-react-app?
+
+## UI
+
+### [10 Bad Typography Habits that Scream Amateur](https://medium.com/@meetchopz/10-bad-typography-habits-that-scream-amateur-8bac07f9c041)[ui,typography]
+
+1. Center-aligning paragraphs of text
+   - Use left aligned text because center align is tough to read.
+2. Too much or too little leading
+   - Use 120–145% of font size. I prefer 150%.
+3. Eye-popping ALL CAPS
+   - Use sentence case on your paragraphs.
+4. Hyphenate default “on”
+   - Turn off Hyphenate and let Photoshop do the rest.
+5. Manually adding line breaks
+   - Make it a habit to use Paragraph Text. Do not manually line break your paragraphs. Use Paragraph Text and let Photoshop wrap your sections automatically.
+6. Unjustly justification
+   - Avoid justifying text. Readability is the priority.
+7. Blocks of Text
+   - Use around five lines as a maximum.
+8. Line Length
+   - A good range of line length is between 45–75 characters — 66 including spaces.
+9. Characters used as icons
+   - Avoid using characters, use scalable vector icons.
+10. Text Alignment
+   - Match your paragraph alignment to that of your design–if you decide to change the text, it will still look correct, and you don’t have to keep on nudging to get the right alignment.
