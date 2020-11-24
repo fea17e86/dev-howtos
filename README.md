@@ -48,6 +48,14 @@
 
 Though the tools we use to build client-side web apps have changed substantially over the years, the fundamental principles behind designing robust software have remained relatively the same. In this guide, we go back to basics and discuss a better way to think about the front-end architecture using modern tools like React, Redux, xState, and Apollo Client.
 
+## Auth
+
+### [The Ultimate Guide to JWT client side auth (Stop using local storage!!!)](https://dev.to/bahdcoder/the-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storage-3an9[auth,javascript,react]
+
+The most popular practice in the industry today is to save your JWT in a cookie or local storage. I've done this for a couple of years, and I have even taught others to do the same, but I didn't think it was a big deal until one of the applications I worked on was hacked.
+
+The solution we want to talk about today is one that would, first of all, prevent us from saving our tokens in a risky place, and secondly, implementing another solution that makes sure even if the attacker manages to get hold of a token, the access to the API would expire almost immediately.
+
 ## Browser API
 
 ### [Use FileSaver to save PDFs](https://www.npmjs.com/package/file-saver)[browser-api,file-saver,blob,array-buffer]
@@ -203,7 +211,7 @@ git branch | grep -v '^*' | xargs git branch -d
 
 ### [Content-Security-Ploicy Header (CSP)](https://content-security-policy.com/)[csp,http,security]
 
-The new Content-Security-Policy HTTP response header helps you reduce XSS risks on modern browsers by declaring, which dynamic resources are allowed to load.
+The new Content-Security-Policy HTTP response header helps you reduce XSS risks on modern browsers by declaring, which dynamic resources are allowed to load
 
 ## JSON
 
