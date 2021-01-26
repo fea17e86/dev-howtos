@@ -383,6 +383,16 @@ On that note, I’ve reviewed the following well-known open-source React apps, a
 - Writing custom hooks
 - Rules of hooks
 
+### [The styled-components happy path](https://www.joshwcomeau.com/css/styled-components/)[react,styled-components,css]
+
+In this article, we've looked at some styled-components-specific APIs, but really the ideas I hope to convey are bigger than any specific tool or library.
+
+When we extend the component mindset to our CSS, we gain all sorts of new superpowers:
+
+- The ability to know, with confidence, whether it's safe to remove a CSS declaration (no possibility of it affecting some totally-separate part of the application!).
+- A complete lack of specificity issues, no more trying to find tricks to bump up specificity.
+- A neat and trim mental model that fits in your head and helps you understand exactly what your pages will look like, without needing to do a bunch of manual testing.
+
 ## State Management
 
 ### [State Machines in React](https://mastery.games/post/state-machines-in-react/)[state-management,react,state-machine,xstate]
