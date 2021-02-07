@@ -2,45 +2,52 @@
 
 **[To the App](https://fea17e86.github.io/dev-howtos) with search and filter functionality**
 
-- [Architecture](#architecture)
-  - [Client-Side Architecture Basics[architecture,frontend,model-view-presenter,observer,react]](#client-side-architecture-basicsarchitecturefrontendmodel-view-presenterobserverreact)
-- [Browser API](#browser-api)
-  - [Use FileSaver to save PDFs[browser-api,file-saver,blob,array-buffer]](#use-filesaver-to-save-pdfsbrowser-apifile-saverblobarray-buffer)
-  - [Converting JavaScript callbacks to Promise and Async-Await[browser-api,javascript,async-await,callback,promise]](#converting-javascript-callbacks-to-promise-and-async-awaitbrowser-apijavascriptasync-awaitcallbackpromise)
-- [CSS](#css)
-  - [10 Best Practices for Improving Your CSS[css]](#10-best-practices-for-improving-your-csscss)
-  - [Stop using CSS in JavaScript for web development[css,css-in-js,css-modules,styled-components]](#stop-using-css-in-javascript-for-web-developmentcsscss-in-jscss-modulesstyled-components)
-  - [Why I Write CSS in JavaScript[css,css-in-js,styled-components]](#why-i-write-css-in-javascriptcsscss-in-jsstyled-components)
-  - [Styled Components vs. CSS Stylesheets[css,css-in-js,styled-components]](#styled-components-vs-css-stylesheetscsscss-in-jsstyled-components)
-  - [EQCSS (Element Queries CSS)[css]](#eqcss-element-queries-csscss)
-- [Git](#git)
-  - [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
-- [HTTP](#http)
-  - [Content-Security-Ploicy Header (CSP)[csp,http,security]](#content-security-ploicy-header-cspcsphttpsecurity)
-- [JSON](#json)
-  - [JSON Stringify of Circular Structures[json,json-stringify,circular-structure]](#json-stringify-of-circular-structuresjsonjson-stringifycircular-structure)
-- [Kubernetes](#kubernetes)
-  - [Kubectl Cheat Sheet[kubernetes,kubectl,cheat-sheet]](#kubectl-cheat-sheetkuberneteskubectlcheat-sheet)
-- [Linux](#linux)
-  - [Linux Cheat Sheet[linux,cheat-sheet]](#linux-cheat-sheetlinuxcheat-sheet)
-- [React](#react)
-  - [Runtime environment variables — create-react-app[react,create-react-app,env]](#runtime-environment-variables--create-react-appreactcreate-react-appenv)
-  - [Content Security Policy (CSP) in Create-React-App (CRA)[create-react-app,csp,http,react,security,webpack]](#content-security-policy-csp-in-create-react-app-cracreate-react-appcsphttpreactsecuritywebpack)
-  - [8 ways to deploy a React app for free[react,deployment]](#8-ways-to-deploy-a-react-app-for-freereactdeployment)
-  - [Examples of large production-grade, open-source React apps[react,real-world-app]](#examples-of-large-production-grade-open-source-react-appsreactreal-world-app)
-  - [How to React ⚛️[react]](#how-to-react-️react)
-  - [The React Cheatsheet for 2020 📄‬ (+ real-world examples)[react,cheatsheet,react-hooks]](#the-react-cheatsheet-for-2020---real-world-examplesreactcheatsheetreact-hooks)
-- [State Management](#state-management)
-  - [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
-  - [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
-  - [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
-- [Testing](#testing)
-  - [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
-  - [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
-- [Typescript](#typescript)
-  - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
-  - [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
-- [UI](#ui)
+- [A little list containing tutorials and solutions for development problems](#a-little-list-containing-tutorials-and-solutions-for-development-problems)
+  - [Architecture](#architecture)
+    - [Client-Side Architecture Basics[architecture,frontend,model-view-presenter,observer,react]](#client-side-architecture-basicsarchitecturefrontendmodel-view-presenterobserverreact)
+  - [Auth](#auth)
+    - [[The Ultimate Guide to JWT client side auth (Stop using local storage!!!)](https://dev.to/bahdcoder/the-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storage-3an9[auth,javascript,react]](#the-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storagehttpsdevtobahdcoderthe-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storage-3an9authjavascriptreact)
+  - [Browser API](#browser-api)
+    - [Use FileSaver to save PDFs[browser-api,file-saver,blob,array-buffer]](#use-filesaver-to-save-pdfsbrowser-apifile-saverblobarray-buffer)
+    - [Converting JavaScript callbacks to Promise and Async-Await[browser-api,javascript,async-await,callback,promise]](#converting-javascript-callbacks-to-promise-and-async-awaitbrowser-apijavascriptasync-awaitcallbackpromise)
+  - [CSS](#css)
+    - [10 Best Practices for Improving Your CSS[css]](#10-best-practices-for-improving-your-csscss)
+    - [Stop using CSS in JavaScript for web development[css,css-in-js,css-modules,styled-components]](#stop-using-css-in-javascript-for-web-developmentcsscss-in-jscss-modulesstyled-components)
+    - [Why I Write CSS in JavaScript[css,css-in-js,styled-components]](#why-i-write-css-in-javascriptcsscss-in-jsstyled-components)
+    - [Styled Components vs. CSS Stylesheets[css,css-in-js,styled-components]](#styled-components-vs-css-stylesheetscsscss-in-jsstyled-components)
+    - [EQCSS (Element Queries CSS)[css]](#eqcss-element-queries-csscss)
+  - [Git](#git)
+    - [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
+  - [HTTP](#http)
+    - [Content-Security-Ploicy Header (CSP)[csp,http,security]](#content-security-ploicy-header-cspcsphttpsecurity)
+  - [JSON](#json)
+    - [JSON Stringify of Circular Structures[json,json-stringify,circular-structure]](#json-stringify-of-circular-structuresjsonjson-stringifycircular-structure)
+  - [Kubernetes](#kubernetes)
+    - [Kubectl Cheat Sheet[kubernetes,kubectl,cheat-sheet]](#kubectl-cheat-sheetkuberneteskubectlcheat-sheet)
+  - [Linux](#linux)
+    - [Linux Cheat Sheet[linux,cheat-sheet]](#linux-cheat-sheetlinuxcheat-sheet)
+  - [React](#react)
+    - [Runtime environment variables — create-react-app[react,create-react-app,env]](#runtime-environment-variables--create-react-appreactcreate-react-appenv)
+    - [Content Security Policy (CSP) in Create-React-App (CRA)[create-react-app,csp,http,react,security,webpack]](#content-security-policy-csp-in-create-react-app-cracreate-react-appcsphttpreactsecuritywebpack)
+    - [8 ways to deploy a React app for free[react,deployment]](#8-ways-to-deploy-a-react-app-for-freereactdeployment)
+    - [Examples of large production-grade, open-source React apps[react,real-world-app]](#examples-of-large-production-grade-open-source-react-appsreactreal-world-app)
+    - [How to React ⚛️[react]](#how-to-react-️react)
+    - [The React Cheatsheet for 2020 📄‬ (+ real-world examples)[react,cheatsheet,react-hooks]](#the-react-cheatsheet-for-2020---real-world-examplesreactcheatsheetreact-hooks)
+    - [The styled-components happy path[react,styled-components,css]](#the-styled-components-happy-pathreactstyled-componentscss)
+  - [State Management](#state-management)
+    - [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
+    - [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
+    - [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
+    - [Awesome Finite State Machines[state-management,state-machine,curated-list]](#awesome-finite-state-machinesstate-managementstate-machinecurated-list)
+  - [Testing](#testing)
+    - [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
+    - [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
+  - [Typescript](#typescript)
+    - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
+    - [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
+  - [UI](#ui)
+    - [Gestaltgesetze für digitale Produkte[ui,gestalt,spacing]](#gestaltgesetze-für-digitale-produkteuigestaltspacing)
+    - [10 Bad Typography Habits that Scream Amateur[ui,typography]](#10-bad-typography-habits-that-scream-amateuruitypography)
 
 ## Architecture
 
@@ -219,10 +226,9 @@ The new Content-Security-Policy HTTP response header helps you reduce XSS risks 
 
 ```typescript
 // custom replacer that uses a local cache
-const createStringifyReplacer = (replacer?: (this: any, key: string, value: any) => any) => (cache: any[]) => (
-  key: string,
-  value: any
-) => {
+const createStringifyReplacer = (
+  replacer?: (this: any, key: string, value: any) => any
+) => (cache: any[]) => (key: string, value: any) => {
   if (typeof value === "object" && value !== null) {
     if (cache.includes(value)) return;
     cache.push(value);
@@ -431,6 +437,12 @@ If you want to start developing an app based on state machines, there’s this c
 
 In this article, I will try to share some knowledge about it with you. We will develop a simple React Native app, which handles multi-step forms. Apart from XState, we will use Formik and TypeScript.
 
+### [Awesome Finite State Machines](https://github.com/leonardomso/awesome-fsm)[state-management,state-machine,curated-list]
+
+A curated list of awesome resources related to finite state machines and statecharts.
+
+The main idea of this repository is to have a nice place when people can rely on nice quality content, such as articles, videos, ebooks, documents, books, etc. A little different from the other awesome type lists that we can find in GitHub about a variety of topics, the idea of this list is to provide a nice and short explanation about concepts first, then show a list of nice content related to that specific concept.
+
 ## Testing
 
 ### [How to Test React Components: the Complete Guide](https://www.freecodecamp.org/news/testing-react-hooks/)[testing,react,enzyme,react-testing-library,cypress,ci]
@@ -468,31 +480,31 @@ Typescript namespaces have history from pre-modules JS times. Technically you sh
 1. Gesetz der Ähnlichkeit
 
    Gestalten Sie Interface Elemente mit ähnlichen oder gleichen Inhalten / Funktionen immer gleich.
-   
+
 2. Gesetz der Nähe
 
    Stellen Sie zusammengehörende Interface Elemente immer möglichst nah beieinander dar.
-   
+
 3. Gesetz der Prägnanz (guten Gestalt)
 
    Priorisieren Sie die unterschiedlichen Interface Elemente. Welches Element soll am prägnantesten sein? Tipp: Dieses erkennen Sie, wenn Sie mit zugekniffenen Augen «unscharf» das User Interface betrachten.
-   
+
 4. Gesetz der Geschlossenheit
 
    Nutzen Sie das Gesetz der Geschlossenheit, um ähnlich gestaltete Informationen / Funktionen voneinander zu trennen, wenn diese nicht zusammen gehören. Fassen Sie mittels realen, oder kognitiv ergänzten Linien, zusammengehörende Informationen / Funktionen zu einer Einheit zusammen.
-   
+
 5. Gesetz der Kontinuität
 
    Wenden Sie die die Wirkung dieses Gesetztes zum Gliedern einzelner Hierarchiestufen an. Inhalte auf der gleichen (erdachten) Fluchtlinie gehören zur gleichen logischen Ebene. Dies ist zum Beispiel bei einer komplexen Navigation hilfreich.
-   
+
 6. Gesetz des gemeinsamen Schicksals
 
    Wenden Sie das Gesetz an, um Grundelemente (ruhend) und Figuren (bewegt) zu verdeutlichen.
-   
+
 7. Gesetz der gemeinsamen Regionen
 
    Grenzen Sie Elemente, die zusammengehörig sind, mittels hinterlegter Farbfläche oder Konturline, von den anderen Elementen ab.
-   
+
 8. Gesetz der Verbundenheit
 
    Wenden Sie das Gesetz der Verbundenheit an, um Elemente, die zusammen eine Einheit bilden, miteinander zu verbinden.
@@ -518,6 +530,5 @@ Typescript namespaces have history from pre-modules JS times. Technically you sh
 9. Characters used as icons
    - Avoid using characters, use scalable vector icons.
 10. Text Alignment
-   - Match your paragraph alignment to that of your design–if you decide to change the text, it will still look correct, and you don’t have to keep on nudging to get the right alignment.
-   
 
+- Match your paragraph alignment to that of your design–if you decide to change the text, it will still look correct, and you don’t have to keep on nudging to get the right alignment.
