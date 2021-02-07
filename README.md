@@ -39,6 +39,7 @@
     - [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
     - [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
     - [Awesome Finite State Machines[state-management,state-machine,curated-list]](#awesome-finite-state-machinesstate-managementstate-machinecurated-list)
+    - [Welcome to the world of Statecharts[state-management,state-machine,state-chart]](#welcome-to-the-world-of-statechartsstate-managementstate-machinestate-chart)
   - [Testing](#testing)
     - [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
     - [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
@@ -442,6 +443,13 @@ In this article, I will try to share some knowledge about it with you. We will d
 A curated list of awesome resources related to finite state machines and statecharts.
 
 The main idea of this repository is to have a nice place when people can rely on nice quality content, such as articles, videos, ebooks, documents, books, etc. A little different from the other awesome type lists that we can find in GitHub about a variety of topics, the idea of this list is to provide a nice and short explanation about concepts first, then show a list of nice content related to that specific concept.
+
+### [Welcome to the world of Statecharts](https://statecharts.github.io/)[state-management,state-machine,state-chart]
+
+Put simply, a statechart is a beefed up [state machine](https://statecharts.github.io/what-is-a-state-machine.html). The beefing up solves a lot of the problems that state machines have, especially state explosion that happens as state machines grow. One of the goals of this site is to help explain what statecharts are and how they are useful.
+
+- [What is a state machine?](https://statecharts.github.io/what-is-a-state-machine.html)
+- [What is a statechart?](https://statecharts.github.io/what-is-a-statechart.html)
 
 ## Testing
 
