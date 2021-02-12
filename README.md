@@ -31,6 +31,7 @@
   - [How to React ⚛️[react]](#how-to-react-️react)
   - [The React Cheatsheet for 2020 📄‬ (+ real-world examples)[react,cheatsheet,react-hooks]](#the-react-cheatsheet-for-2020---real-world-examplesreactcheatsheetreact-hooks)
 - [State Management](#state-management)
+  - [State Machines and State Charts[state-management,state-machine,state-chart,xtstat,robot]](#state-machines-and-state-chartsstate-managementstate-machinestate-chartxtstatrobot)
   - [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
   - [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
   - [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
@@ -40,6 +41,7 @@
 - [Typescript](#typescript)
   - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
   - [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
+
 ## Architecture
 
 ### [Client-Side Architecture Basics](https://khalilstemmler.com/articles/client-side-architecture/introduction/)[architecture,frontend,model-view-presenter,observer,react]
@@ -374,6 +376,10 @@ On that note, I’ve reviewed the following well-known open-source React apps, a
 - Rules of hooks
 
 ## State Management
+
+### [State Machines and State Charts](https://github.com/fea-education/state-machine)[state-management,state-machine,state-chart,xtstat,robot]
+
+You can find a great documentation on [State Machines](https://statecharts.github.io/what-is-a-state-machine.html) and [State Charts](https://statecharts.github.io/what-is-a-statechart.html) at [statecharts.github.io](https://statecharts.github.io/) and [github.com/leonardomso/awesome-fsm](https://github.com/leonardomso/awesome-fsm). I don't feel like just repeating everything. I'd rather just try make you curious about state machines and give you a quick overview on the topic.
 
 ### [State Machines in React](https://mastery.games/post/state-machines-in-react/)[state-management,react,state-machine,xstate]
 
