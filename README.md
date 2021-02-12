@@ -4,6 +4,8 @@
 
 - [Architecture](#architecture)
   - [Client-Side Architecture Basics[architecture,frontend,model-view-presenter,observer,react]](#client-side-architecture-basicsarchitecturefrontendmodel-view-presenterobserverreact)
+- [Auth](#auth)
+  - [[The Ultimate Guide to JWT client side auth (Stop using local storage!!!)](https://dev.to/bahdcoder/the-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storage-3an9[auth,javascript,react]](#the-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storagehttpsdevtobahdcoderthe-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storage-3an9authjavascriptreact)
 - [Browser API](#browser-api)
   - [Use FileSaver to save PDFs[browser-api,file-saver,blob,array-buffer]](#use-filesaver-to-save-pdfsbrowser-apifile-saverblobarray-buffer)
   - [Converting JavaScript callbacks to Promise and Async-Await[browser-api,javascript,async-await,callback,promise]](#converting-javascript-callbacks-to-promise-and-async-awaitbrowser-apijavascriptasync-awaitcallbackpromise)
@@ -30,23 +32,37 @@
   - [Examples of large production-grade, open-source React apps[react,real-world-app]](#examples-of-large-production-grade-open-source-react-appsreactreal-world-app)
   - [How to React ⚛️[react]](#how-to-react-️react)
   - [The React Cheatsheet for 2020 📄‬ (+ real-world examples)[react,cheatsheet,react-hooks]](#the-react-cheatsheet-for-2020---real-world-examplesreactcheatsheetreact-hooks)
+  - [The styled-components happy path[react,styled-components,css]](#the-styled-components-happy-pathreactstyled-componentscss)
 - [State Management](#state-management)
   - [State Machines and State Charts[state-management,state-machine,state-chart,xtstat,robot]](#state-machines-and-state-chartsstate-managementstate-machinestate-chartxtstatrobot)
   - [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
   - [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
   - [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
+  - [Awesome Finite State Machines[state-management,state-machine,curated-list]](#awesome-finite-state-machinesstate-managementstate-machinecurated-list)
+  - [Welcome to the world of Statecharts[state-management,state-machine,state-chart]](#welcome-to-the-world-of-statechartsstate-managementstate-machinestate-chart)
 - [Testing](#testing)
   - [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
   - [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
 - [Typescript](#typescript)
   - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
   - [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
+- [UI](#ui)
+  - [Gestaltgesetze für digitale Produkte[ui,gestalt,spacing]](#gestaltgesetze-für-digitale-produkteuigestaltspacing)
+  - [10 Bad Typography Habits that Scream Amateur[ui,typography]](#10-bad-typography-habits-that-scream-amateuruitypography)
 
 ## Architecture
 
 ### [Client-Side Architecture Basics](https://khalilstemmler.com/articles/client-side-architecture/introduction/)[architecture,frontend,model-view-presenter,observer,react]
 
 Though the tools we use to build client-side web apps have changed substantially over the years, the fundamental principles behind designing robust software have remained relatively the same. In this guide, we go back to basics and discuss a better way to think about the front-end architecture using modern tools like React, Redux, xState, and Apollo Client.
+
+## Auth
+
+### [The Ultimate Guide to JWT client side auth (Stop using local storage!!!)](https://dev.to/bahdcoder/the-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storage-3an9[auth,javascript,react]
+
+The most popular practice in the industry today is to save your JWT in a cookie or local storage. I've done this for a couple of years, and I have even taught others to do the same, but I didn't think it was a big deal until one of the applications I worked on was hacked.
+
+The solution we want to talk about today is one that would, first of all, prevent us from saving our tokens in a risky place, and secondly, implementing another solution that makes sure even if the attacker manages to get hold of a token, the access to the API would expire almost immediately.
 
 ## Browser API
 
@@ -203,7 +219,7 @@ git branch | grep -v '^*' | xargs git branch -d
 
 ### [Content-Security-Ploicy Header (CSP)](https://content-security-policy.com/)[csp,http,security]
 
-The new Content-Security-Policy HTTP response header helps you reduce XSS risks on modern browsers by declaring, which dynamic resources are allowed to load.
+The new Content-Security-Policy HTTP response header helps you reduce XSS risks on modern browsers by declaring, which dynamic resources are allowed to load
 
 ## JSON
 
@@ -375,6 +391,16 @@ On that note, I’ve reviewed the following well-known open-source React apps, a
 - Writing custom hooks
 - Rules of hooks
 
+### [The styled-components happy path](https://www.joshwcomeau.com/css/styled-components/)[react,styled-components,css]
+
+In this article, we've looked at some styled-components-specific APIs, but really the ideas I hope to convey are bigger than any specific tool or library.
+
+When we extend the component mindset to our CSS, we gain all sorts of new superpowers:
+
+- The ability to know, with confidence, whether it's safe to remove a CSS declaration (no possibility of it affecting some totally-separate part of the application!).
+- A complete lack of specificity issues, no more trying to find tricks to bump up specificity.
+- A neat and trim mental model that fits in your head and helps you understand exactly what your pages will look like, without needing to do a bunch of manual testing.
+
 ## State Management
 
 ### [State Machines and State Charts](https://github.com/fea-education/state-machine)[state-management,state-machine,state-chart,xtstat,robot]
@@ -417,6 +443,19 @@ If you want to start developing an app based on state machines, there’s this c
 
 In this article, I will try to share some knowledge about it with you. We will develop a simple React Native app, which handles multi-step forms. Apart from XState, we will use Formik and TypeScript.
 
+### [Awesome Finite State Machines](https://github.com/leonardomso/awesome-fsm)[state-management,state-machine,curated-list]
+
+A curated list of awesome resources related to finite state machines and statecharts.
+
+The main idea of this repository is to have a nice place when people can rely on nice quality content, such as articles, videos, ebooks, documents, books, etc. A little different from the other awesome type lists that we can find in GitHub about a variety of topics, the idea of this list is to provide a nice and short explanation about concepts first, then show a list of nice content related to that specific concept.
+
+### [Welcome to the world of Statecharts](https://statecharts.github.io/)[state-management,state-machine,state-chart]
+
+Put simply, a statechart is a beefed up [state machine](https://statecharts.github.io/what-is-a-state-machine.html). The beefing up solves a lot of the problems that state machines have, especially state explosion that happens as state machines grow. One of the goals of this site is to help explain what statecharts are and how they are useful.
+
+- [What is a state machine?](https://statecharts.github.io/what-is-a-state-machine.html)
+- [What is a statechart?](https://statecharts.github.io/what-is-a-statechart.html)
+
 ## Testing
 
 ### [How to Test React Components: the Complete Guide](https://www.freecodecamp.org/news/testing-react-hooks/)[testing,react,enzyme,react-testing-library,cypress,ci]
@@ -446,3 +485,63 @@ Most of us have used or at least heard about TypeScript, but how many have relea
 ### [Using Typescript namespaces in create-react-app](https://ostrowski.ninja/typescript-namespaces-cra/)[typescript,react,create-react-app,babel,rescripts]
 
 Typescript namespaces have history from pre-modules JS times. Technically you should use ES Modules if you can. However there are useful cases to encapsulate your types and data in namespaces. How do they work in modern JS/TS world and can you use them in create-react-app?
+
+## UI
+
+### [Gestaltgesetze für digitale Produkte](https://userinterfacedesign.ch/gestaltgesetze/)[ui,gestalt,spacing]
+
+1. Gesetz der Ähnlichkeit
+
+   Gestalten Sie Interface Elemente mit ähnlichen oder gleichen Inhalten / Funktionen immer gleich.
+
+2. Gesetz der Nähe
+
+   Stellen Sie zusammengehörende Interface Elemente immer möglichst nah beieinander dar.
+
+3. Gesetz der Prägnanz (guten Gestalt)
+
+   Priorisieren Sie die unterschiedlichen Interface Elemente. Welches Element soll am prägnantesten sein? Tipp: Dieses erkennen Sie, wenn Sie mit zugekniffenen Augen «unscharf» das User Interface betrachten.
+
+4. Gesetz der Geschlossenheit
+
+   Nutzen Sie das Gesetz der Geschlossenheit, um ähnlich gestaltete Informationen / Funktionen voneinander zu trennen, wenn diese nicht zusammen gehören. Fassen Sie mittels realen, oder kognitiv ergänzten Linien, zusammengehörende Informationen / Funktionen zu einer Einheit zusammen.
+
+5. Gesetz der Kontinuität
+
+   Wenden Sie die die Wirkung dieses Gesetztes zum Gliedern einzelner Hierarchiestufen an. Inhalte auf der gleichen (erdachten) Fluchtlinie gehören zur gleichen logischen Ebene. Dies ist zum Beispiel bei einer komplexen Navigation hilfreich.
+
+6. Gesetz des gemeinsamen Schicksals
+
+   Wenden Sie das Gesetz an, um Grundelemente (ruhend) und Figuren (bewegt) zu verdeutlichen.
+
+7. Gesetz der gemeinsamen Regionen
+
+   Grenzen Sie Elemente, die zusammengehörig sind, mittels hinterlegter Farbfläche oder Konturline, von den anderen Elementen ab.
+
+8. Gesetz der Verbundenheit
+
+   Wenden Sie das Gesetz der Verbundenheit an, um Elemente, die zusammen eine Einheit bilden, miteinander zu verbinden.
+
+### [10 Bad Typography Habits that Scream Amateur](https://medium.com/@meetchopz/10-bad-typography-habits-that-scream-amateur-8bac07f9c041)[ui,typography]
+
+1. Center-aligning paragraphs of text
+   - Use left aligned text because center align is tough to read.
+2. Too much or too little leading
+   - Use 120–145% of font size. I prefer 150%.
+3. Eye-popping ALL CAPS
+   - Use sentence case on your paragraphs.
+4. Hyphenate default “on”
+   - Turn off Hyphenate and let Photoshop do the rest.
+5. Manually adding line breaks
+   - Make it a habit to use Paragraph Text. Do not manually line break your paragraphs. Use Paragraph Text and let Photoshop wrap your sections automatically.
+6. Unjustly justification
+   - Avoid justifying text. Readability is the priority.
+7. Blocks of Text
+   - Use around five lines as a maximum.
+8. Line Length
+   - A good range of line length is between 45–75 characters — 66 including spaces.
+9. Characters used as icons
+   - Avoid using characters, use scalable vector icons.
+10. Text Alignment
+
+- Match your paragraph alignment to that of your design–if you decide to change the text, it will still look correct, and you don’t have to keep on nudging to get the right alignment.
