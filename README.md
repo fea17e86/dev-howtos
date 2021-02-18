@@ -40,6 +40,7 @@
   - [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
   - [Awesome Finite State Machines[state-management,state-machine,curated-list]](#awesome-finite-state-machinesstate-managementstate-machinecurated-list)
   - [Welcome to the world of Statecharts[state-management,state-machine,state-chart]](#welcome-to-the-world-of-statechartsstate-managementstate-machinestate-chart)
+  - [Introduction to State Machines Using XState (free video course)[state-management,state-machine,state-chart,xstate]](#introduction-to-state-machines-using-xstate-free-video-coursestate-managementstate-machinestate-chartxstate)
 - [Testing](#testing)
   - [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
   - [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
@@ -455,6 +456,21 @@ Put simply, a statechart is a beefed up [state machine](https://statecharts.gith
 
 - [What is a state machine?](https://statecharts.github.io/what-is-a-state-machine.html)
 - [What is a statechart?](https://statecharts.github.io/what-is-a-statechart.html)
+
+### [Introduction to State Machines Using XState (free video course)](https://egghead.io/courses/introduction-to-state-machines-using-xstate)[state-management,state-machine,state-chart,xstate]
+
+The difficulty of managing state is one of the primary reasons our applications become so complex. We try and manage this complexity with a lot of booleans, somewhat semantic variables like isLoading, wasFetched, and hasError, and over-engineered systems that are still full of bugs. Surely, there's a better way.
+
+That better way is state machines.
+
+**What you'll learn**
+
+- Build a simple machine for a piece of UI
+- Build Hierarchical, Parallel, and, History state machines
+- Identify the conditions & implement transition guards
+- Trigger Actions on transition
+- Handle infinite states when working with inputs
+- Understand Activities
 
 ## Testing
 
