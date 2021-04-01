@@ -33,7 +33,7 @@
   - [How to React ⚛️[react]](#how-to-react-️react)
   - [The React Cheatsheet for 2020 📄‬ (+ real-world examples)[react,cheatsheet,react-hooks]](#the-react-cheatsheet-for-2020---real-world-examplesreactcheatsheetreact-hooks)
   - [The styled-components happy path[react,styled-components,css]](#the-styled-components-happy-pathreactstyled-componentscss)
-  - [React Context for Dependency Injection Not State Management[react,dependency-injection,react-context,mocks]](#react-context-for-dependency-injection-not-state-managementreactdependency-injectionreact-contextmocks)
+  - [React Context for Dependency Injection Not State Management[react,dependency-injection,react-context,mocking]](#react-context-for-dependency-injection-not-state-managementreactdependency-injectionreact-contextmocking)
 - [State Management](#state-management)
   - [State Machines and State Charts[state-management,state-machine,state-chart,xstate,robot]](#state-machines-and-state-chartsstate-managementstate-machinestate-chartxstaterobot)
   - [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
@@ -403,7 +403,7 @@ When we extend the component mindset to our CSS, we gain all sorts of new superp
 - A complete lack of specificity issues, no more trying to find tricks to bump up specificity.
 - A neat and trim mental model that fits in your head and helps you understand exactly what your pages will look like, without needing to do a bunch of manual testing.
 
-### [React Context for Dependency Injection Not State Management](https://blog.testdouble.com/posts/2021-03-19-react-context-for-dependency-injection-not-state/)[react,dependency-injection,react-context,mocks]
+### [React Context for Dependency Injection Not State Management](https://blog.testdouble.com/posts/2021-03-19-react-context-for-dependency-injection-not-state/)[react,dependency-injection,react-context,mocking]
 
 You’ll notice that while our little DI system is clear, explicit, and useful, it isn’t very powerful. The dependency we actually want to replace is our `HttpClient` inside our `ProductsService` (or `productServicesFactory`) but we need to either replace or instantiate our direct dependency first in order to get at the inner dependency.
 
