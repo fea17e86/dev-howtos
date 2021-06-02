@@ -34,6 +34,7 @@
   - [The React Cheatsheet for 2020 📄‬ (+ real-world examples)[react,cheatsheet,react-hooks]](#the-react-cheatsheet-for-2020---real-world-examplesreactcheatsheetreact-hooks)
   - [The styled-components happy path[react,styled-components,css]](#the-styled-components-happy-pathreactstyled-componentscss)
   - [React Context for Dependency Injection Not State Management[react,dependency-injection,react-context,mocking]](#react-context-for-dependency-injection-not-state-managementreactdependency-injectionreact-contextmocking)
+  - [Applying SOLID To React[react,solid,architecture]](#applying-solid-to-reactreactsolidarchitecture)
 - [State Management](#state-management)
   - [State Machines and State Charts[state-management,state-machine,state-chart,xstate,robot]](#state-machines-and-state-chartsstate-managementstate-machinestate-chartxstaterobot)
   - [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
@@ -463,6 +464,16 @@ function Products() {
   // ... same ...
 }
 ```
+
+### [Applying SOLID To React](https://medium.com/docler-engineering/applying-solid-to-react-ca6d1ff926a4)[react,solid,architecture]
+
+SOLID principles were developed to help the longevity of your code, but they are not simple to understand and even more difficult to apply to frontend development. Use this article as a quick reference guide on how to start applying the SOLID principles to your React+Typescript project.
+
+- Single-responsibility principle
+- Open–closed principle
+- Liskov substitution principle
+- Interface segregation principle
+- Dependency inversion principle
 
 ## State Management
 
