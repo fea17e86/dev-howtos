@@ -475,6 +475,23 @@ SOLID principles were developed to help the longevity of your code, but they are
 - Interface segregation principle
 - Dependency inversion principle
 
+### [Clean Architecture For React](https://reactjsexample.com/clean-architecture-for-react/)[react,architecture,clean-architecture]
+
+**Ease of reasoning**
+Divide and conquer: the best way of solving a big problem is splitting it into smaller problems that are easier to solve. We can reason about a layer independently without worrying about the implementation of other layers.
+
+**Substitution**
+Layers can be easily substituted with alternative implementations. It’s not like we’re switching our http library everyday, but when the time comes, the change is self contained within a layer and it should never leak outside the layer’s boundaries. Refactoring becomes easier and less intrusive.
+
+**Evolution**
+Architectures that scale must have the capacity of evolving as software matures and requirements change. Although we like to do some design upfront, there are things that will only show up after development starts. When using layers, we can delay decisions about implementation details until we have enough information to make a sensible choice.
+
+**Decoupling**
+Dependencies between layers are controlled since they’re one directional. Aiming for low coupling (while maintaining high cohesion, or colocation) is a nice way to avoid our application becoming a big ball of mud.
+
+**Testability**
+For me the greatest benefit of layered architectures is that it’s easier to write tests while working on the code. Since each layer should have a well defined responsibility, it’s easier to think about what’s worth testing during implementation.
+
 ## State Management
 
 ### [State Machines and State Charts](https://github.com/fea-education/state-machine)[state-management,state-machine,state-chart,xstate,robot]
