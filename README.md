@@ -2,62 +2,152 @@
 
 **[To the App](https://fea17e86.github.io/dev-howtos) with search and filter functionality**
 
-- [Architecture](#architecture)
-  - [Client-Side Architecture Basics[architecture,frontend,model-view-presenter,observer,react]](#client-side-architecture-basicsarchitecturefrontendmodel-view-presenterobserverreact)
-- [Auth](#auth)
-  - [[The Ultimate Guide to JWT client side auth (Stop using local storage!!!)](https://dev.to/bahdcoder/the-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storage-3an9[auth,javascript,react]](#the-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storagehttpsdevtobahdcoderthe-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storage-3an9authjavascriptreact)
-- [Browser API](#browser-api)
-  - [Use FileSaver to save PDFs[browser-api,file-saver,blob,array-buffer]](#use-filesaver-to-save-pdfsbrowser-apifile-saverblobarray-buffer)
-  - [Converting JavaScript callbacks to Promise and Async-Await[browser-api,javascript,async-await,callback,promise]](#converting-javascript-callbacks-to-promise-and-async-awaitbrowser-apijavascriptasync-awaitcallbackpromise)
-- [CSS](#css)
-  - [10 Best Practices for Improving Your CSS[css]](#10-best-practices-for-improving-your-csscss)
-  - [Stop using CSS in JavaScript for web development[css,css-in-js,css-modules,styled-components]](#stop-using-css-in-javascript-for-web-developmentcsscss-in-jscss-modulesstyled-components)
-  - [Why I Write CSS in JavaScript[css,css-in-js,styled-components]](#why-i-write-css-in-javascriptcsscss-in-jsstyled-components)
-  - [Styled Components vs. CSS Stylesheets[css,css-in-js,styled-components]](#styled-components-vs-css-stylesheetscsscss-in-jsstyled-components)
-  - [EQCSS (Element Queries CSS)[css]](#eqcss-element-queries-csscss)
-- [Git](#git)
-  - [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
-- [HTTP](#http)
-  - [Content-Security-Ploicy Header (CSP)[csp,http,security]](#content-security-ploicy-header-cspcsphttpsecurity)
-- [JSON](#json)
-  - [JSON Stringify of Circular Structures[json,json-stringify,circular-structure]](#json-stringify-of-circular-structuresjsonjson-stringifycircular-structure)
-- [Kubernetes](#kubernetes)
-  - [Kubectl Cheat Sheet[kubernetes,kubectl,cheat-sheet]](#kubectl-cheat-sheetkuberneteskubectlcheat-sheet)
-- [Linux](#linux)
-  - [Linux Cheat Sheet[linux,cheat-sheet]](#linux-cheat-sheetlinuxcheat-sheet)
-- [React](#react)
-  - [Runtime environment variables — create-react-app[react,create-react-app,env]](#runtime-environment-variables--create-react-appreactcreate-react-appenv)
-  - [Content Security Policy (CSP) in Create-React-App (CRA)[create-react-app,csp,http,react,security,webpack]](#content-security-policy-csp-in-create-react-app-cracreate-react-appcsphttpreactsecuritywebpack)
-  - [8 ways to deploy a React app for free[react,deployment]](#8-ways-to-deploy-a-react-app-for-freereactdeployment)
-  - [Examples of large production-grade, open-source React apps[react,real-world-app]](#examples-of-large-production-grade-open-source-react-appsreactreal-world-app)
-  - [How to React ⚛️[react]](#how-to-react-️react)
-  - [The React Cheatsheet for 2020 📄‬ (+ real-world examples)[react,cheatsheet,react-hooks]](#the-react-cheatsheet-for-2020---real-world-examplesreactcheatsheetreact-hooks)
-  - [The styled-components happy path[react,styled-components,css]](#the-styled-components-happy-pathreactstyled-componentscss)
-  - [React Context for Dependency Injection Not State Management[react,dependency-injection,react-context,mocking]](#react-context-for-dependency-injection-not-state-managementreactdependency-injectionreact-contextmocking)
-  - [Applying SOLID To React[react,solid,architecture]](#applying-solid-to-reactreactsolidarchitecture)
-- [State Management](#state-management)
-  - [State Machines and State Charts[state-management,state-machine,state-chart,xstate,robot]](#state-machines-and-state-chartsstate-managementstate-machinestate-chartxstaterobot)
-  - [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
-  - [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
-  - [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
-  - [Awesome Finite State Machines[state-management,state-machine,curated-list]](#awesome-finite-state-machinesstate-managementstate-machinecurated-list)
-  - [Welcome to the world of Statecharts[state-management,state-machine,state-chart]](#welcome-to-the-world-of-statechartsstate-managementstate-machinestate-chart)
-  - [Introduction to State Machines Using XState (free video course)[state-management,state-machine,state-chart,xstate]](#introduction-to-state-machines-using-xstate-free-video-coursestate-managementstate-machinestate-chartxstate)
-- [Testing](#testing)
-  - [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
-  - [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
-- [Typescript](#typescript)
-  - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
-  - [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
-- [UI](#ui)
-  - [Gestaltgesetze für digitale Produkte[ui,gestalt,spacing]](#gestaltgesetze-für-digitale-produkteuigestaltspacing)
-  - [10 Bad Typography Habits that Scream Amateur[ui,typography]](#10-bad-typography-habits-that-scream-amateuruitypography)
+- [A little list containing tutorials and solutions for development problems](#a-little-list-containing-tutorials-and-solutions-for-development-problems)
+  - [Architecture](#architecture)
+    - [Client-Side Architecture Basics[architecture,frontend,model-view-presenter,observer,react]](#client-side-architecture-basicsarchitecturefrontendmodel-view-presenterobserverreact)
+    - [Clean Architecture For React[architecture,clean-architecture,react]](#clean-architecture-for-reactarchitectureclean-architecturereact)
+    - [Value Objects to the rescue![architecture,ddd]](#value-objects-to-the-rescuearchitectureddd)
+      - [1. Value Equality](#1-value-equality)
+      - [2. Immutability](#2-immutability)
+      - [3. Self-Validation](#3-self-validation)
+  - [Auth](#auth)
+    - [[The Ultimate Guide to JWT client side auth (Stop using local storage!!!)](https://dev.to/bahdcoder/the-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storage-3an9[auth,javascript,react]](#the-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storagehttpsdevtobahdcoderthe-ultimate-guide-to-jwt-client-side-auth-stop-using-local-storage-3an9authjavascriptreact)
+  - [Browser API](#browser-api)
+    - [Use FileSaver to save PDFs[browser-api,file-saver,blob,array-buffer]](#use-filesaver-to-save-pdfsbrowser-apifile-saverblobarray-buffer)
+    - [Converting JavaScript callbacks to Promise and Async-Await[browser-api,javascript,async-await,callback,promise]](#converting-javascript-callbacks-to-promise-and-async-awaitbrowser-apijavascriptasync-awaitcallbackpromise)
+  - [CSS](#css)
+    - [10 Best Practices for Improving Your CSS[css]](#10-best-practices-for-improving-your-csscss)
+    - [Stop using CSS in JavaScript for web development[css,css-in-js,css-modules,styled-components]](#stop-using-css-in-javascript-for-web-developmentcsscss-in-jscss-modulesstyled-components)
+    - [Why I Write CSS in JavaScript[css,css-in-js,styled-components]](#why-i-write-css-in-javascriptcsscss-in-jsstyled-components)
+    - [Styled Components vs. CSS Stylesheets[css,css-in-js,styled-components]](#styled-components-vs-css-stylesheetscsscss-in-jsstyled-components)
+    - [EQCSS (Element Queries CSS)[css]](#eqcss-element-queries-csscss)
+    - [Do not waste users’ time on rendering off-screen content[css,dom]](#do-not-waste-users-time-on-rendering-off-screen-contentcssdom)
+  - [Git](#git)
+    - [Delete all branches except master[git]](#delete-all-branches-except-mastergit)
+  - [HTTP](#http)
+    - [Content-Security-Ploicy Header (CSP)[csp,http,security]](#content-security-ploicy-header-cspcsphttpsecurity)
+  - [JSON](#json)
+    - [JSON Stringify of Circular Structures[json,json-stringify,circular-structure]](#json-stringify-of-circular-structuresjsonjson-stringifycircular-structure)
+  - [Kubernetes](#kubernetes)
+    - [Kubectl Cheat Sheet[kubernetes,kubectl,cheat-sheet]](#kubectl-cheat-sheetkuberneteskubectlcheat-sheet)
+  - [Linux](#linux)
+    - [Linux Cheat Sheet[linux,cheat-sheet]](#linux-cheat-sheetlinuxcheat-sheet)
+  - [React](#react)
+    - [Runtime environment variables — create-react-app[react,create-react-app,env]](#runtime-environment-variables--create-react-appreactcreate-react-appenv)
+    - [Content Security Policy (CSP) in Create-React-App (CRA)[create-react-app,csp,http,react,security,webpack]](#content-security-policy-csp-in-create-react-app-cracreate-react-appcsphttpreactsecuritywebpack)
+    - [8 ways to deploy a React app for free[react,deployment]](#8-ways-to-deploy-a-react-app-for-freereactdeployment)
+    - [Examples of large production-grade, open-source React apps[react,real-world-app]](#examples-of-large-production-grade-open-source-react-appsreactreal-world-app)
+    - [How to React ⚛️[react]](#how-to-react-️react)
+    - [The React Cheatsheet for 2020 📄‬ (+ real-world examples)[react,cheatsheet,react-hooks]](#the-react-cheatsheet-for-2020---real-world-examplesreactcheatsheetreact-hooks)
+    - [The styled-components happy path[react,styled-components,css]](#the-styled-components-happy-pathreactstyled-componentscss)
+    - [React Context for Dependency Injection Not State Management[react,dependency-injection,react-context,mocking]](#react-context-for-dependency-injection-not-state-managementreactdependency-injectionreact-contextmocking)
+    - [Applying SOLID To React[react,solid,architecture]](#applying-solid-to-reactreactsolidarchitecture)
+  - [State Management](#state-management)
+    - [State Machines and State Charts[state-management,state-machine,state-chart,xstate,robot]](#state-machines-and-state-chartsstate-managementstate-machinestate-chartxstaterobot)
+    - [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
+    - [Async Guards with XState[state-management,async,state-machine,xstate]](#async-guards-with-xstatestate-managementasyncstate-machinexstate)
+    - [Multistep form handling with Finite State Machines, Formik and TypeScript[state-management,form,formik,react,react-native,state-machine,typescript,validation,xstate,yup]](#multistep-form-handling-with-finite-state-machines-formik-and-typescriptstate-managementformformikreactreact-nativestate-machinetypescriptvalidationxstateyup)
+    - [Awesome Finite State Machines[state-management,state-machine,curated-list]](#awesome-finite-state-machinesstate-managementstate-machinecurated-list)
+    - [Welcome to the world of Statecharts[state-management,state-machine,state-chart]](#welcome-to-the-world-of-statechartsstate-managementstate-machinestate-chart)
+    - [Introduction to State Machines Using XState (free video course)[state-management,state-machine,state-chart,xstate]](#introduction-to-state-machines-using-xstate-free-video-coursestate-managementstate-machinestate-chartxstate)
+    - [Hookstate - The simple but incredibly fast and flexible state management that is based on React state hook[state-management,react]](#hookstate---the-simple-but-incredibly-fast-and-flexible-state-management-that-is-based-on-react-state-hookstate-managementreact)
+    - [React polymorphic components with TypeScript[react,components,typescript]](#react-polymorphic-components-with-typescriptreactcomponentstypescript)
+  - [Testing](#testing)
+    - [How to Test React Components: the Complete Guide[testing,react,enzyme,react-testing-library,cypress,ci]](#how-to-test-react-components-the-complete-guidetestingreactenzymereact-testing-librarycypressci)
+    - [An in-depth beginner's guide to testing React applications[testing,jest,mocking,react,react-testing-library]](#an-in-depth-beginners-guide-to-testing-react-applicationstestingjestmockingreactreact-testing-library)
+  - [Typescript](#typescript)
+    - [Releasing a library written in TypeScript on NPM (YouTube)[typescript,build,library]](#releasing-a-library-written-in-typescript-on-npm-youtubetypescriptbuildlibrary)
+    - [Using Typescript namespaces in create-react-app[typescript,react,create-react-app,babel,rescripts]](#using-typescript-namespaces-in-create-react-apptypescriptreactcreate-react-appbabelrescripts)
+    - [6 TypeScript Code Patterns To Make Your Code More Robust[typescript,pattern]](#6-typescript-code-patterns-to-make-your-code-more-robusttypescriptpattern)
+      - [1. Use Pick To Implement Interface Segregation Principle](#1-use-pick-to-implement-interface-segregation-principle)
+      - [2. Const Assertion To Derive Types From Literal Expressions](#2-const-assertion-to-derive-types-from-literal-expressions)
+      - [3. Exhaustive Checks With “never” Type](#3-exhaustive-checks-with-never-type)
+      - [4. Use Opaque Type To Simulate Nominal Typing Behavior](#4-use-opaque-type-to-simulate-nominal-typing-behavior)
+  - [UI](#ui)
+    - [Gestaltgesetze für digitale Produkte[ui,gestalt,spacing]](#gestaltgesetze-für-digitale-produkteuigestaltspacing)
+    - [10 Bad Typography Habits that Scream Amateur[ui,typography]](#10-bad-typography-habits-that-scream-amateuruitypography)
 
 ## Architecture
 
 ### [Client-Side Architecture Basics](https://khalilstemmler.com/articles/client-side-architecture/introduction/)[architecture,frontend,model-view-presenter,observer,react]
 
 Though the tools we use to build client-side web apps have changed substantially over the years, the fundamental principles behind designing robust software have remained relatively the same. In this guide, we go back to basics and discuss a better way to think about the front-end architecture using modern tools like React, Redux, xState, and Apollo Client.
+
+### [Clean Architecture For React](https://reactjsexample.com/clean-architecture-for-react/)[architecture,clean-architecture,react]
+
+**Ease of reasoning**
+Divide and conquer: the best way of solving a big problem is splitting it into smaller problems that are easier to solve. We can reason about a layer independently without worrying about the implementation of other layers.
+
+**Substitution**
+Layers can be easily substituted with alternative implementations. It’s not like we’re switching our http library everyday, but when the time comes, the change is self contained within a layer and it should never leak outside the layer’s boundaries. Refactoring becomes easier and less intrusive.
+
+**Evolution**
+Architectures that scale must have the capacity of evolving as software matures and requirements change. Although we like to do some design upfront, there are things that will only show up after development starts. When using layers, we can delay decisions about implementation details until we have enough information to make a sensible choice.
+
+**Decoupling**
+Dependencies between layers are controlled since they’re one directional. Aiming for low coupling (while maintaining high cohesion, or colocation) is a nice way to avoid our application becoming a big ball of mud.
+
+**Testability**
+For me the greatest benefit of layered architectures is that it’s easier to write tests while working on the code. Since each layer should have a well defined responsibility, it’s easier to think about what’s worth testing during implementation.
+
+### [Value Objects to the rescue!](https://medium.com/swlh/value-objects-to-the-rescue-28c563ad97c6)[architecture,ddd]
+
+Value objects have three main characteristics:
+
+#### 1. Value Equality
+
+Value objects are defined by their attributes. They are equal if their attributes are equal. A value object differs from an entity in that it does not have a concept of identity.
+
+#### 2. Immutability
+
+Once created, a value object should always be equal. The only way to change its value is by full replacement. What this means, in code, is to create a new instance with the new value.
+
+#### 3. Self-Validation
+
+**If an instance exists, it is valid!** A value object must verify the validity of its attributes when being created. If any of its attributes are invalid, then the object should not be created and an error or exception should be raised.
+
+```typescript
+import { validateIsHexString, validateIsHexStringOfBits } from "./validation";
+
+export class HexString {
+  static of = (hexString: string): HexString => new HexString(hexString);
+
+  static validate = (hexString?: string, expectedBits?: number): true => {
+    const isExpectedBitsDefined =
+      typeof expectedBits === "number" && Number.isFinite(expectedBits);
+
+    if (isExpectedBitsDefined) {
+      return validateIsHexStringOfBits(expectedBits as number)(hexString);
+    }
+
+    return validateIsHexString(hexString);
+  };
+
+  private readonly internalValue: string;
+
+  constructor(hexString: string, expectedBits?: number) {
+    HexString.validate(hexString, expectedBits);
+
+    this.internalValue = hexString;
+  }
+
+  get value(): string {
+    return this.internalValue;
+  }
+
+  get numBits(): number {
+    return this.internalValue.length * 4;
+  }
+
+  get length(): number {
+    return this.internalValue.length;
+  }
+
+  public toString = (): string => {
+    return this.internalValue;
+  };
+}
+```
 
 ## Auth
 
@@ -190,6 +280,14 @@ Another concept that element queries brings to CSS is the idea of ‘scoping’ 
 
 QCSS is a JavaScript plugin that lets you write element queries inside CSS today. With performance in mind, this plugin is written in pure JavaScript, so it doesn't require jQuery or any other libraries on your page in order to function - add [EQCSS.js](https://github.com/eqcss/eqcss) to your HTML and you’re ready to get started!
 
+### [Do not waste users’ time on rendering off-screen content](https://marian-caikovski.medium.com/do-not-waste-users-time-on-rendering-off-screen-content-eed17636e7a7)[css,dom]
+
+So you see the browser spends about the same significant time on laying out the contents outside the viewport, the contents hidden as overflow and the contents styled as invisible.
+
+But if a browser is given hints with `content-visibility` property, it disregards the invisible contents until they get visible. As a result the rendering speed is increased 3634/227=16 times.
+
+`content-visibility` property can be used with any contents, but it is most suitable for structured contents with fixed or predictable height. If you develop applications displaying quite big tabular data, you should forget about virtual scrollers and pagination
+
 ## Git
 
 ### [Delete all branches except master](https://www.hacksparrow.com/git/delete-all-branches-except-master.html)[git]
@@ -230,16 +328,16 @@ The new Content-Security-Policy HTTP response header helps you reduce XSS risks 
 
 ```typescript
 // custom replacer that uses a local cache
-const createStringifyReplacer = (replacer?: (this: any, key: string, value: any) => any) => (cache: any[]) => (
-  key: string,
-  value: any
-) => {
-  if (typeof value === "object" && value !== null) {
-    if (cache.includes(value)) return;
-    cache.push(value);
-  }
-  return replacer ? replacer(key, value) : value;
-};
+const createStringifyReplacer =
+  (replacer?: (this: any, key: string, value: any) => any) =>
+  (cache: any[]) =>
+  (key: string, value: any) => {
+    if (typeof value === "object" && value !== null) {
+      if (cache.includes(value)) return;
+      cache.push(value);
+    }
+    return replacer ? replacer(key, value) : value;
+  };
 
 // a wrapper around JSON.stringify, using a custom replacer
 export function stringify(
@@ -421,7 +519,9 @@ export function useDeps() {
 }
 
 export function DepsProvider({ children, ...services }) {
-  return <DepsContext.Provider value={services}>{children}</DepsContext.Provider>;
+  return (
+    <DepsContext.Provider value={services}>{children}</DepsContext.Provider>
+  );
 }
 ```
 
@@ -474,23 +574,6 @@ SOLID principles were developed to help the longevity of your code, but they are
 - Liskov substitution principle
 - Interface segregation principle
 - Dependency inversion principle
-
-### [Clean Architecture For React](https://reactjsexample.com/clean-architecture-for-react/)[react,architecture,clean-architecture]
-
-**Ease of reasoning**
-Divide and conquer: the best way of solving a big problem is splitting it into smaller problems that are easier to solve. We can reason about a layer independently without worrying about the implementation of other layers.
-
-**Substitution**
-Layers can be easily substituted with alternative implementations. It’s not like we’re switching our http library everyday, but when the time comes, the change is self contained within a layer and it should never leak outside the layer’s boundaries. Refactoring becomes easier and less intrusive.
-
-**Evolution**
-Architectures that scale must have the capacity of evolving as software matures and requirements change. Although we like to do some design upfront, there are things that will only show up after development starts. When using layers, we can delay decisions about implementation details until we have enough information to make a sensible choice.
-
-**Decoupling**
-Dependencies between layers are controlled since they’re one directional. Aiming for low coupling (while maintaining high cohesion, or colocation) is a nice way to avoid our application becoming a big ball of mud.
-
-**Testability**
-For me the greatest benefit of layered architectures is that it’s easier to write tests while working on the code. Since each layer should have a well defined responsibility, it’s easier to think about what’s worth testing during implementation.
 
 ## State Management
 
@@ -562,6 +645,35 @@ That better way is state machines.
 - Handle infinite states when working with inputs
 - Understand Activities
 
+### [Hookstate - The simple but incredibly fast and flexible state management that is based on React state hook](https://hookstate.js.org)[state-management,react]
+
+```javascript
+import React from "react";
+import { createState, useState } from "@hookstate/core";
+
+const globalState = createState(0);
+
+setInterval(() => globalState.set((p) => p + 1), 3000);
+
+export const ExampleComponent = () => {
+  const state = useState(globalState);
+  return (
+    <>
+      <b>Counter value: {state.get()}</b> (watch +1 every 3 seconds){" "}
+      <button onClick={() => state.set((p) => p + 1)}>Increment</button>
+    </>
+  );
+};
+```
+
+### [React polymorphic components with TypeScript](https://isamatov.com/polymorphic-components-react-typescript/)[react,components,typescript]
+
+In a nutshell, the pattern lets you specify which HTML tag to use for rendering your component using as prop.
+
+In this post, we learned to write strongly typed polymorphic components using TypeScript and generics.
+
+Using this approach and using TypeScript with React, in general, is definitely more work upfront. But it’s all worth it in the end because we improve our development experience by providing additional guarantees in our code.
+
 ## Testing
 
 ### [How to Test React Components: the Complete Guide](https://www.freecodecamp.org/news/testing-react-hooks/)[testing,react,enzyme,react-testing-library,cypress,ci]
@@ -591,6 +703,90 @@ Most of us have used or at least heard about TypeScript, but how many have relea
 ### [Using Typescript namespaces in create-react-app](https://ostrowski.ninja/typescript-namespaces-cra/)[typescript,react,create-react-app,babel,rescripts]
 
 Typescript namespaces have history from pre-modules JS times. Technically you should use ES Modules if you can. However there are useful cases to encapsulate your types and data in namespaces. How do they work in modern JS/TS world and can you use them in create-react-app?
+
+### [6 TypeScript Code Patterns To Make Your Code More Robust](https://betterprogramming.pub/6-typescript-code-patterns-to-make-your-code-more-robust-bbe54354f39f)[typescript,pattern]
+
+#### 1. Use Pick To Implement Interface Segregation Principle
+
+Clients should not be forced to implement interfaces they do not use.
+
+```javascript
+interface Client {
+  name: string;
+  dateOfBirth: Date;
+  active: boolean;
+}
+
+type ClientSummary = Pick<Client, "name" | "active">;
+
+const clients: ClientSummary = {
+  name: "John",
+  active: true,
+};
+```
+
+#### 2. Const Assertion To Derive Types From Literal Expressions
+
+The derived types can help to enforce type safety from a single source of truth.
+
+```javascript
+export const payGrades = {
+  low: "1",
+  average: "2",
+  high: "3"
+} as const;
+
+type t = typeof payGrades;
+type payGradeType = keyof t; // 'low' | 'average' | 'high'
+type payValueType =  t[keyof t]; // '1' | '2' | '3'
+
+const hisPay: payValueType = '3'; //okay
+const myPay:  payValueType = '4'; // error
+```
+
+#### 3. Exhaustive Checks With “never” Type
+
+With the exhaustive type checking in place, we can detect a missing condition at compile time instead of run time.
+
+```javascript
+type DataTypes = "client" | "order";
+
+function getProcessName(c: DataTypes): string {
+  switch (c) {
+    case "client":
+      return "register" + c;
+    case "order":
+      return "process" + c;
+    default:
+      return assertUnreachable(c);
+  }
+}
+
+function assertUnreachable(x: never): never {
+  throw new Error("something is very wrong");
+}
+```
+
+#### 4. Use Opaque Type To Simulate Nominal Typing Behavior
+
+The opaque type implementation can make your TypeScript code cleaner and stronger when used in the right place.
+
+```javascript
+type OpaqueType<K, T> = K & { _brand: T }
+type Customer = OpaqueType<Person, "Customer">
+type VIPCustomer = OpaqueType<Person, "VIP">
+
+function getVIPName(vip: VIPCustomer) {
+  return vip.name;
+}
+
+const cust = {name: 'John'} as Customer;
+const vip = {name: 'Mark'} as VIPCustomer;
+
+console.log('vip name:', getVIPName(vip)); //vip name: Mark
+// Error: Argument of type 'Customer' is not assignable to parameter of type 'VIPCustomer'.
+console.log('vip name:', getVIPName(cust));
+```
 
 ## UI
 
