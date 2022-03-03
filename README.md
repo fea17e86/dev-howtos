@@ -42,6 +42,7 @@
     - [The styled-components happy path[react,styled-components,css]](#the-styled-components-happy-pathreactstyled-componentscss)
     - [React Context for Dependency Injection Not State Management[react,dependency-injection,react-context,mocking]](#react-context-for-dependency-injection-not-state-managementreactdependency-injectionreact-contextmocking)
     - [Applying SOLID To React[react,solid,architecture]](#applying-solid-to-reactreactsolidarchitecture)
+    - [Improve the Performance of your React Forms[react,form,state-management]](#improve-the-performance-of-your-react-formsreactformstate-management)
   - [State Management](#state-management)
     - [State Machines and State Charts[state-management,state-machine,state-chart,xstate,robot]](#state-machines-and-state-chartsstate-managementstate-machinestate-chartxstaterobot)
     - [State Machines in React[state-management,react,state-machine,xstate]](#state-machines-in-reactstate-managementreactstate-machinexstate)
@@ -574,6 +575,84 @@ SOLID principles were developed to help the longevity of your code, but they are
 - Liskov substitution principle
 - Interface segregation principle
 - Dependency inversion principle
+
+### [Improve the Performance of your React Forms](https://epicreact.dev/improve-the-performance-of-your-react-forms/)[react,form,state-management]
+
+So, assuming we do need to react to a user's interaction, what's the best way to do that without suffering from "perf death by a thousand cuts?" The solution? [State colocation](https://kcd.im/colocate-state)!
+
+```tsx
+/**
+ * Not much we need to pass here. The `name` is important because that's how
+ * we retrieve the field's value from the form.elements when the form's
+ * submitted. The wasSubmitted is useful to know whether we should display
+ * all the error message even if this field hasn't been touched. But everything
+ * else is managed internally which means this field doesn't experience
+ * unnecessary re-renders like the SlowInput component.
+ */
+function FastInput({
+  name,
+  wasSubmitted,
+}: {
+  name: string
+  wasSubmitted: boolean
+}) {
+  const [value, setValue] = React.useState('')
+  const [touched, setTouched] = React.useState(false)
+  const errorMessage = getFieldError(value)
+  const displayErrorMessage = (wasSubmitted || touched) && errorMessage
+  return (
+    <div key={name}>
+      <PenaltyComp />
+      <label htmlFor={`${name}-input`}>{name}:</label> <input
+        id={`${name}-input`}
+        name={name}
+        type="text"
+        onChange={(event) => setValue(event.currentTarget.value)}
+        onBlur={() => setTouched(true)}
+        pattern="[a-z]{3,10}"
+        required
+        aria-describedby={displayErrorMessage ? `${name}-error` : undefined}
+      />
+      {displayErrorMessage ? (
+        <span role="alert" id={`${name}-error`} className="error-message">
+          {errorMessage}
+        </span>
+      ) : null}
+    </div>
+  )
+}
+
+/**
+ * The FastForm component takes the uncontrolled approach. Rather than keeping
+ * track of all the values and passing the values to each field, we let the
+ * fields keep track of things themselves and we retrieve the values from the
+ * form.elements when it's submitted.
+ */
+function FastForm() {
+  const [wasSubmitted, setWasSubmitted] = React.useState(false)
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const formData = new FormData(event.currentTarget)
+    const fieldValues = Object.fromEntries(formData.entries())
+    const formIsValid = Object.values(fieldValues).every(
+      (value: string) => !getFieldError(value),
+    )
+    setWasSubmitted(true)
+    if (formIsValid) {
+      console.log(`Fast Form Submitted`, fieldValues)
+    }
+  }
+  return (
+    <form noValidate onSubmit={handleSubmit}>
+      {fieldNames.map((name) => (
+        <FastInput key={name} name={name} wasSubmitted={wasSubmitted} />
+      ))}
+      <button type="submit">Submit</button>
+    </form>
+  )
+}
+```
+
 
 ## State Management
 
